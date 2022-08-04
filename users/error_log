@@ -1,0 +1,359 @@
+[13-May-2022 12:19:58 Africa/Lagos] PHP Notice:  Undefined variable: ur in /home/yenrbbwu/public_html/users/yenreach_billboard.php on line 5
+[20-May-2022 16:54:35 Africa/Lagos] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function call_to_action_select(), 0 passed in /home/yenrbbwu/public_html/users/billboard_application.php on line 147 and exactly 1 expected in /home/yenrbbwu/includes_public/functions.php:535
+Stack trace:
+#0 /home/yenrbbwu/public_html/users/billboard_application.php(147): call_to_action_select()
+#1 {main}
+  thrown in /home/yenrbbwu/includes_public/functions.php on line 535
+[20-May-2022 16:54:51 Africa/Lagos] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function call_to_action_select(), 0 passed in /home/yenrbbwu/public_html/users/billboard_application.php on line 147 and exactly 1 expected in /home/yenrbbwu/includes_public/functions.php:535
+Stack trace:
+#0 /home/yenrbbwu/public_html/users/billboard_application.php(147): call_to_action_select()
+#1 {main}
+  thrown in /home/yenrbbwu/includes_public/functions.php on line 535
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:56:36 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:56:36 Africa/Lagos] PHP Warning:  Use of undefined constant output - assumed 'output' (this will throw an Error in a future version of PHP) in /home/yenrbbwu/includes_public/functions.php on line 545
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 16:57:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 16:57:12 Africa/Lagos] PHP Warning:  Use of undefined constant output - assumed 'output' (this will throw an Error in a future version of PHP) in /home/yenrbbwu/includes_public/functions.php on line 545
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:05:11 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:05:11 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:10:32 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:12 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:11:17 Africa/Lagos] PHP Notice:  Array to string conversion in /home/yenrbbwu/includes_public/functions.php on line 542
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 539
+[20-May-2022 17:12:07 Africa/Lagos] PHP Warning:  A non-numeric value encountered in /home/yenrbbwu/includes_public/functions.php on line 543
+[20-Jun-2022 10:27:32 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[20-Jun-2022 10:27:38 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[21-Jun-2022 10:57:48 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[21-Jun-2022 10:58:09 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[21-Jun-2022 10:58:22 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[21-Jun-2022 11:34:41 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[21-Jun-2022 07:56:40 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[21-Jun-2022 07:56:47 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[21-Jun-2022 10:06:20 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[21-Jun-2022 10:06:37 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[21-Jun-2022 16:54:01 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[21-Jun-2022 16:54:33 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[22-Jun-2022 08:57:20 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[22-Jun-2022 10:39:34 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[22-Jun-2022 11:39:36 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[22-Jun-2022 11:39:41 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[23-Jun-2022 05:57:41 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[23-Jun-2022 11:01:40 Africa/Lagos] PHP Fatal error:  Uncaught Error: Undefined constant "to_string" in /home/yenrbbwu/public_html/users/report.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/report.php on line 126
+[23-Jun-2022 11:10:48 Africa/Lagos] PHP Fatal error:  Uncaught Error: Undefined constant "to_string" in /home/yenrbbwu/public_html/users/report.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/report.php on line 126
+[23-Jun-2022 11:11:01 Africa/Lagos] PHP Fatal error:  Uncaught Error: Undefined constant "to_string" in /home/yenrbbwu/public_html/users/report.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/report.php on line 126
+[23-Jun-2022 11:11:16 Africa/Lagos] PHP Fatal error:  Uncaught Error: Undefined constant "to_string" in /home/yenrbbwu/public_html/users/report.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/report.php on line 126
+[23-Jun-2022 11:11:25 Africa/Lagos] PHP Fatal error:  Uncaught Error: Undefined constant "to_string" in /home/yenrbbwu/public_html/users/report.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/report.php on line 126
+[23-Jun-2022 11:12:06 Africa/Lagos] PHP Fatal error:  Uncaught Error: Undefined constant "to_string" in /home/yenrbbwu/public_html/users/report.php:126
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/report.php on line 126
+[23-Jun-2022 11:24:57 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[27-Jun-2022 02:09:59 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$phone in /home/yenrbbwu/public_html/users/add_business.php on line 93
+[26-Jun-2022 21:10:07 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[26-Jun-2022 21:22:22 America/New_York] PHP Parse error:  syntax error, unexpected token "else" in /home/yenrbbwu/public_html/users/facilities.php on line 96
+[26-Jun-2022 21:24:27 America/New_York] PHP Parse error:  Unclosed '{' on line 69 in /home/yenrbbwu/public_html/users/facilities.php on line 136
+[27-Jun-2022 05:32:24 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$application_code in /home/yenrbbwu/public_html/users/billboard_application.php on line 51
+[27-Jun-2022 05:32:29 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applications.php on line 69
+[27-Jun-2022 05:44:31 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applications.php on line 69
+[27-Jun-2022 05:53:28 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$application_code in /home/yenrbbwu/public_html/users/billboard_application.php on line 51
+[27-Jun-2022 05:53:32 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applications.php on line 69
+[27-Jun-2022 05:53:32 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applications.php on line 69
+[28-Jun-2022 04:20:49 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_type in /home/yenrbbwu/public_html/users/billboard_applied.php on line 72
+[28-Jun-2022 04:20:49 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_link in /home/yenrbbwu/public_html/users/billboard_applied.php on line 76
+[28-Jun-2022 04:20:49 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:20:49 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:20:49 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applied.php on line 136
+[28-Jun-2022 04:23:27 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_type in /home/yenrbbwu/public_html/users/billboard_applied.php on line 72
+[28-Jun-2022 04:23:27 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_link in /home/yenrbbwu/public_html/users/billboard_applied.php on line 76
+[28-Jun-2022 04:23:27 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:23:27 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:23:27 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applied.php on line 136
+[28-Jun-2022 04:24:10 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_type in /home/yenrbbwu/public_html/users/billboard_applied.php on line 72
+[28-Jun-2022 04:24:10 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_link in /home/yenrbbwu/public_html/users/billboard_applied.php on line 76
+[28-Jun-2022 04:24:10 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:24:10 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:24:10 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applied.php on line 136
+[28-Jun-2022 04:25:20 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_type in /home/yenrbbwu/public_html/users/billboard_applied.php on line 72
+[28-Jun-2022 04:25:20 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_link in /home/yenrbbwu/public_html/users/billboard_applied.php on line 76
+[28-Jun-2022 04:25:20 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:25:20 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:25:20 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applied.php on line 136
+[28-Jun-2022 04:38:45 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_type in /home/yenrbbwu/public_html/users/billboard_applied.php on line 72
+[28-Jun-2022 04:38:45 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_link in /home/yenrbbwu/public_html/users/billboard_applied.php on line 76
+[28-Jun-2022 04:38:45 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:38:45 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[28-Jun-2022 04:38:45 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$status in /home/yenrbbwu/public_html/users/billboard_applied.php on line 116
+[28-Jun-2022 04:39:21 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_type in /home/yenrbbwu/public_html/users/billboard_application_edit.php on line 124
+[28-Jun-2022 04:39:21 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_link in /home/yenrbbwu/public_html/users/billboard_application_edit.php on line 125
+[28-Jun-2022 04:39:21 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_text in /home/yenrbbwu/public_html/users/billboard_application_edit.php on line 126
+[28-Jun-2022 04:39:21 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$posposed_start_date in /home/yenrbbwu/public_html/users/billboard_application_edit.php on line 127
+[28-Jun-2022 04:43:33 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$posposed_start_date in /home/yenrbbwu/public_html/users/billboard_application_edit.php on line 124
+[28-Jun-2022 05:14:05 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$posposed_start_date in /home/yenrbbwu/public_html/users/billboard_application_edit.php on line 124
+[30-Jun-2022 10:30:00 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[30-Jun-2022 10:30:00 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[30-Jun-2022 10:30:00 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[30-Jun-2022 10:30:00 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[30-Jun-2022 10:30:00 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[04-Jul-2022 03:43:32 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_type in /home/yenrbbwu/public_html/users/billboard_applied.php on line 72
+[04-Jul-2022 03:43:32 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$action_link in /home/yenrbbwu/public_html/users/billboard_applied.php on line 76
+[04-Jul-2022 03:43:32 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 03:43:32 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 03:44:59 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 03:44:59 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 03:46:14 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 03:46:14 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 04:10:44 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$application_code in /home/yenrbbwu/public_html/users/billboard_application_edit.php on line 86
+[04-Jul-2022 07:12:01 America/New_York] PHP Warning:  require_once(../../includes_yenreach/initialize.php): Failed to open stream: No such file or directory in /home/yenrbbwu/public_html/users/billboard_apply.php on line 2
+[04-Jul-2022 07:12:01 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes_yenreach/initialize.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/yenrbbwu/public_html/users/billboard_apply.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/billboard_apply.php on line 2
+[04-Jul-2022 07:14:18 America/New_York] PHP Warning:  require_once(../../includes_yenreach/initialize.php): Failed to open stream: No such file or directory in /home/yenrbbwu/public_html/users/billboard_apply.php on line 2
+[04-Jul-2022 07:14:18 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes_yenreach/initialize.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/yenrbbwu/public_html/users/billboard_apply.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/billboard_apply.php on line 2
+[04-Jul-2022 12:17:42 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:17:42 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:18:03 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:18:03 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:20:00 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:20:00 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:26:14 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:26:14 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:27:06 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:27:06 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:27:40 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:27:40 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:30:51 Africa/Lagos] PHP Warning:  Undefined variable $applicatio in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[04-Jul-2022 12:30:51 Africa/Lagos] PHP Warning:  Attempt to read property "start_date" on null in /home/yenrbbwu/public_html/users/billboard_applied.php on line 107
+[06-Jul-2022 15:12:40 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[06-Jul-2022 15:12:40 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[06-Jul-2022 15:12:40 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[06-Jul-2022 15:12:40 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[06-Jul-2022 15:12:40 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[26-Jul-2022 14:58:14 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[26-Jul-2022 14:58:14 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[26-Jul-2022 14:58:14 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[26-Jul-2022 14:58:14 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[26-Jul-2022 14:58:14 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[27-Jul-2022 05:41:12 America/New_York] PHP Warning:  Undefined variable $page in /home/yenrbbwu/public_html/users/new_login.php on line 48
+[27-Jul-2022 06:02:09 America/New_York] PHP Warning:  Undefined variable $page in /home/yenrbbwu/public_html/users/new_login.php on line 48
+[27-Jul-2022 08:55:44 America/New_York] PHP Warning:  Undefined variable $page in /home/yenrbbwu/public_html/users/new_login.php on line 48
+[28-Jul-2022 04:11:22 Africa/Lagos] PHP Warning:  Undefined property: Session::$business_string in /home/yenrbbwu/public_html/users/skip_logo_upload.php on line 6
+[28-Jul-2022 04:11:22 Africa/Lagos] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /home/yenrbbwu/public_html/users/skip_logo_upload.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/skip_logo_upload.php on line 15
+[28-Jul-2022 07:06:20 America/New_York] PHP Warning:  Undefined variable $page in /home/yenrbbwu/public_html/users/new_login.php on line 48
+[28-Jul-2022 16:09:42 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[28-Jul-2022 16:09:42 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[28-Jul-2022 16:09:42 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[28-Jul-2022 16:09:42 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[28-Jul-2022 16:09:42 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[01-Aug-2022 11:00:29 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[01-Aug-2022 11:00:29 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[01-Aug-2022 11:00:29 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[01-Aug-2022 11:00:29 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[01-Aug-2022 11:00:29 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[01-Aug-2022 13:57:18 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[01-Aug-2022 13:57:18 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[01-Aug-2022 13:57:18 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[01-Aug-2022 13:57:18 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[01-Aug-2022 13:57:18 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[01-Aug-2022 14:50:44 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[01-Aug-2022 14:50:44 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[01-Aug-2022 14:50:44 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[01-Aug-2022 14:50:44 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[01-Aug-2022 14:50:44 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[02-Aug-2022 15:27:20 Africa/Lagos] PHP Warning:  Undefined property: Session::$business_string in /home/yenrbbwu/public_html/users/skip_logo_upload.php on line 6
+[02-Aug-2022 15:27:20 Africa/Lagos] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in /home/yenrbbwu/public_html/users/skip_logo_upload.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/skip_logo_upload.php on line 15
+[03-Aug-2022 16:08:55 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[03-Aug-2022 16:08:55 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[03-Aug-2022 16:08:55 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[03-Aug-2022 16:08:55 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[03-Aug-2022 16:08:55 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[03-Aug-2022 16:08:59 Africa/Lagos] PHP Warning:  Undefined property: stdClass::$message in /home/yenrbbwu/public_html/users/saved_businesses.php on line 187
+[03-Aug-2022 16:08:59 Africa/Lagos] PHP Warning:  Undefined variable $buses in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[03-Aug-2022 16:08:59 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /home/yenrbbwu/public_html/users/saved_businesses.php on line 193
+[03-Aug-2022 16:08:59 Africa/Lagos] PHP Warning:  Undefined variable $pagination in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290
+[03-Aug-2022 16:08:59 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function total_pages() on null in /home/yenrbbwu/public_html/users/saved_businesses.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/yenrbbwu/public_html/users/saved_businesses.php on line 290

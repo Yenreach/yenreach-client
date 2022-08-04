@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Yenreach.com - Online Business Directory</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+
+    <!-- Vendor CSS Files -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <!-- Template Main CSS File -->
+  <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
+  <!-- =======================================================
+  * Template Name: Presento - v3.5.0
+  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <!-- Facebook Pixel Code -->
+
+  <!-- End Facebook Pixel Code -->
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-center">
+        <!-- Uncomment below if you prefer to use an text logo -->
+        <!-- <h1 class="logo me-auto"><a href="index.php">Yenreach<span>.</span>com</a></h1>-->
+        <a href="index.php" class="logo me-auto"
+          ><img
+            src="./WhatsApp Image 2022-03-11 at 9.21.04 AM.jpeg"
+            alt="Yenreach market logo"
+        /></a>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+               <div>
+              <i class="bi bi-x text-dark close mobile-nav-toggle"></i>
+            </div>
+            <li><a class="active" href="index.php">Home</a></li>
+            <li><a class="" href="explorer.php">Dashboard</a></li>
+            <li><a class="" href="about.php">About</a></li>
+            <li><a class="" href="blog.php">Blog</a></li>
+            <li><a class="" href="contact.php">Contact</a></li>
+
+            <li><a class="" href="users/dashboard">Log In</a></li>
+          </ul>
+          <!--<i class="bi bi-list text-light mobile-nav-toggle"></i>-->
+          <i class="bi bi-x text-dark close mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+        <a href="users/signup" class="get-started-btn">Sell your product</a>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div class="hero-container" data-aos="zoom-out" data-aos-delay="100">
+        <div
+          class="col-12 hero-text-container col-md-12 h-100 col-lg-10 mx-auto flex d-flex flex-column align-items-center justify-content-center list-unstyled"
+        >
+          <h1 class="fw-bold mb-4">
+            Sell on
+            <span style="color: #00c853; font-family: 'Koulen', cursive" ;
+              >Yenreach Market</span
+            >
+          </h1>
+          <p id="header-caption">
+            The Fastest Growing Business Directory Platform in Nigeria
+          </p>
+          <form
+            action="includes/search.php"
+            method="POST"
+            enctype="multipart/form-data"
+            class="col-11 col-md-10 col-lg-6 mx-auto mx-md-0"
+          >
+            <div class="input-group">
+              <input
+                class="form-control search-text py-3 rounded-pill border-0"
+                list="datalistOptions"
+                id="exampleDataList"
+                placeholder="e.g carpenter, restaurant, stylist, doctor, etc"
+                name="category"
+                required
+              />
+              <datalist id="datalistOptions">
+                <option></option>
+              </datalist>
+
+              <button
+                class="btn sign-up- py-3 px-2 col-4 col-md-3 text-white d-md-block rounded-pill mx-1"
+                type="submit"
+                name="search"
+                style="background: #00c853"
+              >
+                Search
+              </button>
+            </div>
+            <div></div>
+          </form>
+        </div>
+
+        <!-- <div class="row row-top"></div> -->
+      </div>
+
+      <!-- HERO CONTAINER SECOND SLLIDER -->
+      <!-- <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557204663/park-4174278_640.jpg" alt="hero-section-image" > -->
+    </section>
+    <!-- End Hero -->
+    <main id="main">
+      <div class="top-filter d-lg-none">
+        <div class="h-100 w-100">
+          <div
+            class="product-card d-flex justify-content-evenly align-items-center py-2 px-2"
+          >
+            <!-- <span class="d-block p-4 bg-white">
+          <i class="bi bi-alarm"></i>
+          Alarm
+        </span> 
+      <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+  </li>
+      -->
+
+            <span
+              class="col-4 nav-link active d-flex flex-column align-items-center justify-content-evenly px-4 bg-white rounded"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              <i class="bi bi-alarm"></i>
+              <small>Real Estate</small>
+            </span>
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly px-3 mx-1 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly py-3 px-3 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+          </div>
+          <!-- SECOND CARD -->
+
+          <!-- THIRD CARD -->
+          <div
+            class="product-card d-flex justify-content-evenly align-items-center px-2"
+          >
+            <!-- <span class="d-block p-4 bg-white">
+            <i class="bi bi-alarm"></i>
+            Alarm
+          </span> -->
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly py-3 px-3 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly py-3 px-4 mx-1 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly py-3 px-4 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+            <!-- <div class="product-card bg-primary">
+        </div>
+        <div class="product-card bg-primary">
+        </div> -->
+          </div>
+
+          <div
+            class="product-card d-flex justify-content-evenly align-items-center px-2"
+          >
+            <!-- <span class="d-block p-4 bg-white">
+          <i class="bi bi-alarm"></i>
+          Alarm
+        </span> -->
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly py-3 px-3 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly py-3 px-4 mx-1 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+            <span
+              class="col-4 d-flex flex-column align-items-center justify-content-evenly py-3 px-4 bg-white rounded"
+            >
+              <i class="bi bi-alarm"></i>
+              <small> Fashion </small>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= Tabs Section ======= -->
+      <section id="tabs" class="tabs container-fluid">
+        <div class="row" data-aos="fade-up">
+          <div class="col-3 side-bar pb-3 rounded d-none d-lg-block">
+            <div class="col-12 mx-auto rounded py-3">
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+              <a
+                href="#"
+                class="rounded fw-bold text-dark d-flex justify-content-center align-items-center my-2 mx-auto col-12"
+              >
+                <i class="bi bi-alarm"></i>
+                <small class="mx-3"> Fashion </small>
+              </a>
+            </div>
+          </div>
+
+          <div class="tab-content col-12 col-lg-9 ms-lg-auto">
+            <div id="tab-2">
+              <div
+                id="home-list"
+                class="row px-1"
+              >
+                <!-- PRODUCT CARD SECTION -->
+                <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                
+                 <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                
+                 <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                 <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                 <div class="col-md-10 col-lg-6 mb-3 mx-auto mx-md-0 py-2">
+                  <div class="d-flex">
+                    <div class="business-image-container col-5">
+                      <img
+                        src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg"
+                        class="card-img-top h-100 w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="col-7 d-flex flex-column justify-content-evenly align-items-center px-3"
+                    >
+                      <h4 class="text-wrap text-black card-name">
+                        Dordorian concept
+                      </h4>
+                      <div class="d-flex flex-column">
+                        <p class="mb-0 float-end fx-6 text-muted">
+                          <span>N24,000</span>
+                        </p>
+                        <!-- <span>N3,000</span> -->
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="text-muted"></p>
+                      <a
+                        href="#"
+                        class="btn light-btn text-white px-4 py-2"
+                        style="font-size: 14px"
+                        >View product</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Tabs Section -->
+
+      <!-- ======= Services Section ======= -->
+
+      <!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner rounded">
+    <div class="carousel-item item active d-flex " data-bs-interval="10000">
+      <div class="ads-image-container">
+        <img src="./ads image.jpg" alt="advert banner" >
+      </div>
+      <div class="ads-text-container
+      d-flex flex-column align-items-center justify-content-center">
+       <p class="fs-4 text-center">Advertise your business here</p>
+       <button class="btn px-4 py-2">Learn more</button>
+     </div>
+    </div>
+  
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+      <!-- ======= Counts Section ======= -->
+      <!-- <section id="counts" class="counts"> -->
+      <!-- <div class="container" data-aos="fade-up"> -->
+
+      <!-- <div class="row"> -->
+
+      <!-- <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style='font-size:50px'></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Visitors Today</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+            <i class="bi bi-emoji-smile"  style='font-size:50px'></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Live Users</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+              <div class="count-box">
+                <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="<?php //echo $answer['total'];?>" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Listed Businesses</p>
+            </div>
+          </div>-->
+
+      <!-- <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"  style='font-size:50px'></i>
+              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours of Support</p>
+            </div>
+          </div>
+
+        </div>  -->
+
+      <!-- </div> -->
+      <!-- </section>
+      End Counts Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- <footer id="footer">
+
+<div class="footer-top">
+  <div class="container">
+    <div class="row"> -->
+
+    <!-- <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="explorer.php">Explore</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="about.php">About Us</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="contact.php">Contact Us</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="add-business.php">Add My Business</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="faqs.php">FAQs</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+        </ul>
+      </div> -->
+
+    <!-- <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Our Brands</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#dcl">Dordorian Concept LTD</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#bgs">BYS Graduate School</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#bmc">BusiTech Model College</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#tec">TEC Industrial Park</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#btu">BusiTech University</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#bbm">BYS Business Magazine</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#de">Dordorian Estate</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="professional_courses.php">Professional Certification Programs</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 footer-newsletter">
+        <h4>Sign Up For Updates Now!</h4>
+        <p>Never miss out on the hottest offers and deals from your favourite local businesses.</p>
+        <form action="index.php#footer" role="form" method="post">
+          <input type="email" name="email" placeholder="name@example.com" required><input type="submit" name="newsletter" value="Submit">
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+    <!-- Vertically centered modal -->
+    <!-- <div class="modal-dialog modal-dialog-centered">
+  
+</div> -->
+
+    <!-- Vertically centered scrollable modal -->
+    <!-- Button trigger modal -->
+
+    <!-- <div class="container-fluid d-md-flex py-4" style="background-color: #083640" >
+
+  <div class="me-md-auto text-center text-md-start">
+    <div class="copyright" style="color: #083640">
+      &copy; Copyright <strong><span>yenreach.com</span></strong>. All Rights Reserved
+    </div>
+  </div>
+  <div class="social-links text-center text-md-end pt-3 pt-md-0">
+    <a href="https://www.facebook.com/yenreachng/" class="facebook"><i class="bi bi-facebook"></i></a>
+    <a href="https://instagram.com/yenreach?utm_medium=copy_link" class="insta"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.linkedin.com/company/yenreach" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    <a href="https://api.whatsapp.com/send?phone=+2349024401562" class="whatsapp"><i class="bi bi-whatsapp"></i></i></a>
+  </div>
+</div>
+
+
+
+</footer> -->
+    <!-- End Footer -->
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
+    <!-- <div class= "overlay">
+
+<div style="height:20rem;background-color: #083640" class=" col-8 cookie-container col-lg-4 rounded mb-4 py-2">
+
+  <div class=" col-11 mx-auto h-100 d-flex flex-column align-items-start justify-content-evenly"> 
+    <div>
+      <svg aria-hidden="true" class="mln4 mb24 sm:d-none svg-spot spotCookieLg " style="color:#fff" width="96" height="96" viewBox="0 0 96 96">
+        <path d="M35 45.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0zM63.5 63a7.5 7.5 0 100-15 7.5 7.5 0 000 15zm-19 19a7.5 7.5 0 100-15 7.5 7.5 0 000 15z" opacity=".2"/>
+        <path d="M56.99 2.53a23.1 23.1 0 0114.66 6.15h.01l.01.02c.57.55.61 1.27.5 1.74v.07a10.95 10.95 0 01-3.07 4.77 9 9 0 01-6.9 2.5 10.34 10.34 0 01-9.72-10.44v-.08a10 10 0 011.03-3.74l.01-.03.02-.02c.28-.5.82-.92 1.52-.95.63-.02 1.27-.02 1.93.01zm12.04 7.83a20.1 20.1 0 00-12.2-4.83l-.92-.03c-.23.6-.38 1.25-.43 1.94a7.34 7.34 0 006.95 7.34 6 6 0 004.64-1.7c.94-.88 1.6-1.9 1.96-2.72zm15.3 8.76a6.84 6.84 0 00-5.09-.24 7.9 7.9 0 00-3.28 2.05 1.8 1.8 0 00-.3 1.95l.02.02v.02a15.16 15.16 0 008.74 7.47c.64.23 1.32.08 1.8-.33a6.63 6.63 0 001.63-1.97l.01-.03.01-.03c1.67-3.5-.12-7.32-3.54-8.91zm-5.5 3.28c.36-.25.82-.5 1.35-.67.92-.3 1.92-.35 2.89.1 2.14 1 2.92 3.14 2.11 4.88-.12.21-.26.41-.43.6l-.26-.1a12.29 12.29 0 01-5.66-4.81zM32 24a2 2 0 11-4 0 2 2 0 014 0zm12 21a2 2 0 11-4 0 2 2 0 014 0zm36 4a2 2 0 11-4 0 2 2 0 014 0zm-7 21a2 2 0 11-4 0 2 2 0 014 0zM59 81a2 2 0 11-4 0 2 2 0 014 0zM22 63a2 2 0 11-4 0 2 2 0 014 0zm27 7a9 9 0 11-18 0 9 9 0 0118 0zm-3 0a6 6 0 10-12 0 6 6 0 0012 0zM33 41a9 9 0 11-18 0 9 9 0 0118 0zm-15 0a6 6 0 1012 0 6 6 0 00-12 0zm50 11a9 9 0 11-18 0 9 9 0 0118 0zm-3 0a6 6 0 10-12 0 6 6 0 0012 0zM44.08 4.24c.31.48.33 1.09.05 1.58a17.46 17.46 0 00-2.36 8.8c0 9.55 7.58 17.24 16.85 17.24 2.97 0 5.75-.78 8.16-2.15a1.5 1.5 0 012.1.66 12.08 12.08 0 0011 6.74 12.4 12.4 0 007.85-2.75 1.5 1.5 0 012.38.74A45.76 45.76 0 0192 48.16c0 24.77-19.67 44.9-44 44.9S4 72.93 4 48.16C4 25.23 20.84 6.28 42.64 3.58a1.5 1.5 0 011.44.66zM40.22 7C21.32 10.71 7 27.7 7 48.16c0 23.17 18.39 41.9 41 41.9s41-18.73 41-41.9c0-3.52-.42-6.93-1.22-10.2a15.5 15.5 0 01-7.9 2.15c-5.5 0-10.36-2.83-12.97-7.1a19.46 19.46 0 01-8.28 1.85c-11 0-19.86-9.1-19.86-20.24 0-2.7.52-5.26 1.45-7.62zM92 91a2 2 0 100-4 2 2 0 000 4zM7 8.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM82.5 90a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm9.5-7.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM13.5 8a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM80 14.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM53.5 20a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+    </svg>
+    </div>
+    <div class="px-1 text-white">
+      <h5>
+        Your privacy
+      </h5>
+      <p>
+        By clicking “Accept all cookies”, you agree Yenreach can store cookies on your device and disclose information in accordance with our 
+        <a href="">Cookie Policy.</a>
+         
+      </p>
+  </div>
+
+  <div class="col-12">
+    
+  </div>
+  
+  <div class="col-12">
+    <button class="btn col-12 py-2 mx-auto text-white accept-button" style="background: #00C853;" id="login_submit" name="submit" type="submit">Accept all cookies</button>
+  </div>
+  
+</div>
+</div>
+</div>
+
+ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <script src="owlcarousel/owl.carousel.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> -->
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+<!-- /***
+     <img  class="card-img-top h-100 w-100"  src=<?php
+                                        if(!empty($business->photos)){
+                                            $photo = array_shift($business->photos);
+                                            if(file_exists($photo->filepath)){
+                                                echo $photo->filepath;
+                                            } else {
+                                                if(!empty($business->filename)){
+                                                    if(file_exists("images/thumbnails/".$business->filename.".jpg")){
+                                                        echo "images/thumbnails/".$business->filename.".jpg";
+                                                    } else {
+                                                        if(file_exists("images/".$business->filename.".jpg")){
+                                                            echo "images/".$business->filename.".jpg";
+                                                        } else {
+                                                            echo "assets/img/office_building.png";
+                                                        }
+                                                    }
+                                                } else {
+                                                    echo "assets/img/office_building.png";
+                                                }
+                                            }
+                                        } else {
+                                            if(!empty($business->filename)){
+                                                if(file_exists("images/thumbnails/".$business->filename.".jpg")){
+                                                    echo "images/thumbnails/".$business->filename.".jpg";
+                                                } else {
+                                                    if(file_exists("images/".$business->filename.".jpg")){
+                                                        echo "images/".$business->filename.".jpg";
+                                                    } else {
+                                                        echo "assets/img/office_building.png";
+                                                    }
+                                                }
+                                            } else {
+                                                echo "assets/img/office_building.png";
+                                            }
+                                        }
+                                    ?>) alt="">&nbsp; > 
+
+-->

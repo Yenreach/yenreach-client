@@ -1,0 +1,8 @@
+[14-Feb-2022 13:32:47 Africa/Lagos] PHP Notice:  Undefined index: string in /home/yenrbbwu/public_html/payments/make_payment.php on line 7
+[14-Feb-2022 13:32:47 Africa/Lagos] PHP Notice:  Undefined variable: initiste_payment in /home/yenrbbwu/public_html/payments/make_payment.php on line 20
+[14-Feb-2022 13:34:18 Africa/Lagos] PHP Notice:  Undefined index: string in /home/yenrbbwu/public_html/payments/make_payment.php on line 7
+[14-Feb-2022 13:34:18 Africa/Lagos] PHP Notice:  Undefined variable: initiste_payment in /home/yenrbbwu/public_html/payments/make_payment.php on line 20
+[14-Feb-2022 13:34:19 Africa/Lagos] PHP Notice:  Undefined variable: msg in /home/yenrbbwu/public_html/payments/payment_failure.php on line 5
+[14-Feb-2022 15:08:25 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$subject in /home/yenrbbwu/public_html/payments/flutterwave_verification_page.php on line 24
+[14-Feb-2022 15:08:30 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$subject in /home/yenrbbwu/public_html/payments/flutterwave_verification_page.php on line 24
+[14-Feb-2022 15:42:46 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$subject in /home/yenrbbwu/public_html/payments/flutterwave_verification_page.php on line 24

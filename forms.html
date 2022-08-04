@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome/css/all.css" rel="stylesheet" />
+
+  </head>
+  <body>
+ <section class='col-12' style='height:100vh'>
+
+             <div class="row">
+                        <div class="col-lg-6 col-md-9 col-sm-12 mx-auto" >
+                                     <!---
+         Address (Textarea),
+Town (Input text),
+Lga (Select, don't worry about the options)
+State (Select, don't worry about the options
+Designation/Title of Branch Head
+Name of Person in Charge (Input Text)
+Branch Phone number
+
+Branch Email-->
+         
+          <div class="row">
+            <div class="col-lg-10 col-md-9 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-success">Add Business Branch</h4>
+                                            </div>
+                    <div class="card-body card block">
+                        <form role="form" action="working_hours" method="POST" class="row g-3 needs-validation">
+                                        <div class="form-group col-12 ">
+                                            <label class="py-1 ">Address</label>
+                                    <textarea  id="admin" cols="10" rows="5" class="form-control bg-light"></textarea>
+                                        </div>
+                            <div class="col-12 mb-2">
+                                <label for="Town" class="form-label mt-1">Town</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-house"></i></span>
+                                    <input type='text' class="form-control" required>
+                                    <!--<div class="invalid-feedback">Please Select the Work Day.</div>-->
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label for="LGA" class="form-label mt-1">Local Government Area</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-geo-alt"></i></span>
+                                    <select type="text"  class="form-control"  required>
+                                        <option>Akure</option>
+                                    </select>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="State" class="form-label mt-1">State</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-geo"></i></span>
+                                    <select type="text" name="timing" class="form-control"  required>
+                                        <option>Ondo State</option>
+                                    </select>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="Designation" class="form-label mt-1">Designation</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-briefcase"></i></span>
+                                    <input type="text" class="form-control"  required>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="name" class="form-label mt-1">Name of Person in Charge</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-clock"></i></span>
+                                    <input type="text" class="form-control"  required>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="contact" class="form-label mt-1">Contact Number</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-telephone"></i></span>
+                                    <input type="number" class="form-control"  required>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="email" class="form-label mt-1">Contact Email</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
+                                    <input type="email"  class="form-control" required>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                                <div class="col-12 mt-3">
+                                <button class="btn w-100 text-white py-2" style="background: #00C853;" id="work_submit" name="submit" type="submit">Submit</button>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="row">
+            <div class="col-lg-10 col-md-9 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-success">Add Business Branch</h4>
+                                            </div>
+                    <div class="card-body card block">
+                        <form role="form" action="working_hours" method="POST" class="row g-3 needs-validation">
+                            <div class="col-12 mb-2">
+                                <label for="Town" class="form-label mt-1">Facebook</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-facebook"></i></span>
+                                    <input type='url' class="form-control" required>
+                                    <!--<div class="invalid-feedback">Please Select the Work Day.</div>-->
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label for="LGA" class="form-label mt-1">Twitter</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-twitter"></i></span>
+                                    <input type='url' class="form-control" required>
+
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="State" class="form-label mt-1">LinkedIn</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-linkedin"></i></span>
+                                        <input type='url' class="form-control" required>
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="Designation" class="form-label mt-1">Instagram</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-instagram"></i></span>
+                                    <input type="url" class="form-control"  required>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                            <div class="col-12 mb-2">
+                                <label for="name" class="form-label mt-1">Website</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-globe"></i></span>
+                                    <input type="url" class="form-control"  required>
+                                    <!--<div class="invalid-feedback">Please Provide the Work Time.</div>-->
+                                </div>
+                                <div class="col-12 mt-3">
+                                <button class="btn w-100 text-white py-2" style="background: #00C853;" id="work_submit" name="submit" type="submit">Submit</button>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                     
+                     
+                    
+ </section>
+      <script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      </body>
