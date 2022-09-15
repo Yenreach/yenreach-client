@@ -142,12 +142,12 @@
                         <?php echo output_message($message); ?>
                     </div>
                     <div class="card-body card-block p-3">
-                                <ul class="d-flex align-items-center justify-content-center col-11 mx-auto pe-5">
-                                    <li class='col-5 list-unstyled d-flex align-items-center justify-content-center text-white' style='height:3rem;background-color:#00C853;font-size:12px'>Business 
-                                    details</li>
-                                    <li class=' col-5 list-unstyled d-flex align-items-center justify-content-center' style='height:3rem;background-color:rgba(101, 156, 240, 0.1); font-size:10px'>Business category</li>
-                                    <li class=' col-5  list-unstyled d-flex align-items-center justify-content-center' style='height:3rem;background-color:rgba(101, 156, 240, 0.1);font-size:10px'>Business file</li>
-                                </ul>
+                        <ul class="row p-0">
+                            <li class='col-4 list-unstyled d-flex align-items-center justify-content-center text-white' style='height:3rem;background-color:#00C853;font-size:12px'>Business 
+                            details</li>
+                            <li class=' col-4 list-unstyled d-flex align-items-center justify-content-center' style='height:3rem;background-color:rgba(101, 156, 240, 0.1);font-size:10px'>Business category</li>
+                            <li class=' col-4  list-unstyled d-flex align-items-center justify-content-center' style='height:3rem;background-color:rgba(101, 156, 240, 0.1);font-size:10px'>Business file</li>
+                        </ul>
                         <div class="col-12">
                             <form role="form" action="add_business" method="POST" class="row g-3 needs-validation">
                                 <div class="col-12">

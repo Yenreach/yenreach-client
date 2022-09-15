@@ -14,7 +14,11 @@
     <link href="./vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
-
+    <style>
+        .ck.ck-editor__editable_inline {
+            min-height: 40vh;
+        }
+    </style>
 
 </head>
 
@@ -189,6 +193,12 @@
                             <li><a href="business_subscriptions">Business Subscriptions</a></li>
                             <li><a href="business_facilities">Business Facilities</a></li>
                             <li><a href="advert_payment_types">Advert Payment Types</a></li>
+                            <li><a href="blogpost">Make a Blog Post</a></li>
+                            <li><a href="all_blogs">Blogs</a></li>
+                            <li><a href="add_email">Add Email to Sequence</a></li>
+                            <li><a href="emails">Emails</a></li>
+                            <li><a href="terms">Update Terms</a></li>
+                            <li><a href="privacy_policy">Update Privacy and Policy</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="fa fa-building"></i>
@@ -199,6 +209,7 @@
                         </ul>
                     </li>
                     <li><a class="" href="users" aria-expanded="false"><i class="fa fa-users"></i><span class="nav-text">Users</span></a></li>
+                    <li><a class="" href="all_activities" aria-expanded="false"><i class="fa fa-inbox"></i><span class="nav-text">Activity Log</span></a></li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="fa fa-sign-hanging"></i>
                     <span class="nav-text">Billboard Applications</span></a>
                         <ul aria-expanded="false">

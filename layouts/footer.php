@@ -27,9 +27,6 @@
             <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#bmc">BusiTech Model College</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#tec">TEC Industrial Park</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#btu">BusiTech University</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#bbm">BYS Business Magazine</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#de">Dordorian Estate</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="professional_courses.php">Professional Certification Programs</a></li>
           </ul>
         </div>
 

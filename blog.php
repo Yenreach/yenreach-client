@@ -1,101 +1,158 @@
 <?php
+    require_once("../includes_public/initialize.php");
     require_once('includes/header.php');
-    require_once('config/connect.php');
+
+    $url = $_SERVER['REQUEST_URI'];
+    $exploded = explode("?", $url);
+    
+    $explode = !empty($exploded[1]) ? (string)$exploded[1] : "";
+    if(!empty($explode)){
+        $gurl = "fetch_one_blog_post_api.php?string=".$explode;
+        $blog = perform_get_curl($gurl);
+        if($blog){
+            if($blog->status == "success"){         
+                $blog = $blog->data;
+            } else {
+                redirect_to("blogs.php");
+            }
+        } else {
+                die("Blog Link Broken");
+            }
+    } else {
+        die("Wrong Path");
+    }
+    
+    $gurl = "fetch_comments_api.php?string=".$blog->blog_string;
+    $comments = perform_get_curl($gurl);
+    if($comments){
+        if($comments->status == "success"){
+            $comments = $comments->data;
+        } else {
+            $comments = [];
+        }
+    } else {
+        die("Comment Link Broken");
+    } 
+
+    
+
+    if(isset($_POST['submit'])){
+        if(!$session->is_logged_in()){
+            redirect_to("users/auth");   
+        }
+        $author_string = !empty($session->verify_string) ? (string)$session->verify_string : "";
+        $comment = !empty($_POST['comment']) ? (string)$_POST['comment'] : "";
+        $blog_string = !empty($explode) ? (string)$explode : "";
+
+        $purl = "add_comment_api.php";
+        $pdata = [
+                'author_string' => $author_string,
+                'comment' => $comment,
+                'blog_string' => $blog_string
+            ];
+        $add_comment = perform_post_curl($purl, $pdata);
+        if($add_comment){
+            if($add_comment->status == "success"){
+                $response = $add_comment->data;
+                $session->message("comment has been added successfully");
+                $message = "comment has been added successfully";
+                header("Refresh:0");
+            } else {
+                $message = $add_comment->message;     
+            }
+        } else {
+            $message = "Something went wrong";
+        }
+    } else {
+        $author_string = "";
+        $comment = "";
+        $blog_string = "";
+    }
+
+    function formatString($str) {
+        $pattern = "/&lt;/i";
+        $pattern2 = "/&gt;/i";
+        $pattern3 = "/;nbsp;/i";
+        $pattern4 = "/&/i";
+        $pattern5 = "/amp/i";
+        
+        $str = preg_replace($pattern, "<", $str);
+        $str = preg_replace($pattern2, ">", $str);
+        $str = preg_replace($pattern3, " ", $str);
+        $str = preg_replace($pattern4, "", $str);
+        $str = preg_replace($pattern5, "", $str);
+        echo $str;
+      };
 ?>
-  <main id="main">
+<html>
+<style>
+    .img-full {
+        width: 100%;
+        height: 400px;
+    }
+    @media only screen and (min-width:850px){
+    .img-full {
+        width: 80%;
+        height: 400px;
+    }
+    }
 
-    <!-- ======= Breadcrumbs ======= -->
-<?php
-    require_once('layouts/header.php');
-?>
-    <section class="breadcrumbs mb-">
-      <!--<div class="container">-->
 
-      <!--  <ol>-->
-      <!--    <li><a href="index.php">Home</a></li>-->
-      <!--    <li>Blog</li>-->
-      <!--  </ol>-->
-      <!--  <h2>Blog</h2>-->
-
-      <!--</div>-->
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-
-          <div class="col-lg-6 entries py-2 px-1">
-            <?php
-            $query = mysqli_query($link, "SELECT * FROM `blog`");
-            while($results = mysqli_fetch_assoc($query)) { ?>
-
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="<?php echo $results['image_path']; ?>" alt="<?php if($results['image_path']==""){echo "";} ?>" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.php?id=<?php echo $results['id'] ?>"><?php echo $results['title']; ?></a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.php?id=<?php echo $results['id']; ?>"><time datetime="<?php echo $results['datecreated']; ?>"><?php echo date('d M, Y', strtotime($results['datecreated'])); ?></time></a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <?php $text = substr($results['content'], 0, 500); echo $text."...";  ?>
-                <div class="read-more">
-                  <a class='ms-lg-auto' href="blog-single.php?id=<?php echo $results['id']; ?>">Read More</a>
+</style>
+<body>
+    <?php include_layout_template("header.php"); ?>
+    <main class="col-12 mx-auto" style="margin-top:6rem">
+        <div class="container py-5 px-md-5" data-aos="fade-up">
+            <div class='mb-4'>
+                <h1 class='fw-bolder text-capitalize blog-title mb-3 text-black' style="font-size: 50px"><?php echo $blog->title; ?></h1>
+                <div class='d-flex align-items-center' style="gap:1.5rem">
+                    <div class="rounded-circle" style="width:40px; height:40px; background: gray"></div>
+                    <div class='d-flex flex-column'>
+                        <span class='fw-bold'>Author: <?php echo $blog->author; ?></span>
+                        <span>posted_at: <?php echo(date("Y-m-d", $blog->created_at)); ?></span>
+                    </div>
                 </div>
-              </div>
-
-            </article><!-- End blog entry -->
-          <?php }?>
-
-          </div><!-- End blog entries list -->
-
-          <div class="col-lg-4 ms-lg-auto">
-
-            <div class="sidebar col-lg-10 ">
-
-              <h3 class="sidebar-title">Search</h3>
-              <div class="sidebar-item search-form">
-                <form action="">
-                  <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-              </div><!-- End sidebar search formn-->
-
-              <h3 class="sidebar-title">Recent Posts</h3>
-              <div class="sidebar-item recent-posts">
+            </div>
+            <div class='blog-img rounded-top img-full'>
+                <?php if (!empty($blog->file_path)) {  ?>
+                    <img src="<?php echo"images/".$blog->file_path.".jpg"; ?>" alt="<?php echo $business->name;  ?>" style="width:100%; height:100%;object-fit: cover;">
+                <?php }?>
+            </div>
+            <div class='my-4 mb-5'>
                 <?php
-                $query2 = mysqli_query($link, "SELECT * FROM `blog`");
-                while($result2 = mysqli_fetch_assoc($query2)) { ?>
-                <div class="post-item clearfix">
-                  <img src="<?php if($result2['image_path']=="") {echo "assets/img/no_image.png";} else {echo $result2['image_path'];} ?>" alt="">
-                  <h4><a href="blog-single.php?id=<?php echo $result2['id']; ?>"><?php echo $result2['title']; ?></a></h4>
-                  <time datetime="<?php echo $result2['datecreated']; ?>"><?php echo date('d M, Y', strtotime($result2['datecreated'])); ?></time>
-                </div>
-              <?php } ?>
-
-              </div><!-- End sidebar recent posts-->
-
-            </div><!-- End sidebar -->
-
-          </div><!-- End blog sidebar -->
-
+                    echo  htmlspecialchars_decode($blog->post);
+                ?>
+            </div>
+            <form action="" method="post" class="">
+                <h3 class="fw-bold">Leave a Reply</h3>
+                <textarea name="comment" id="coment" cols="30" rows="10" class="form-control">Your comment here</textarea>
+                <button name="submit" type="submit" class="d-block btn btn-success my-3">Post Comment</button>
+            </form>
+            <div class='rounded d-flex flex-column mt-4' style="gap:2rem;">
+                <?php
+                    if (!empty($comments)) {
+                        foreach($comments as $comment){
+                ?>
+                        <div class=''>
+                            <div class='d-flex align-items-center gap-4 justify-content-between'>
+                                <div class='d-flex align-items-center gap-4'>
+                                    <div class="rounded-circle" style="width:40px; height:40px; background: gray"></div>
+                                    <span class='fw-bold'><?php echo $comment->author; ?></span>
+                                </div>
+                                <span style='font-size:14px'>posted_at: <?php echo(date("Y-m-d", $comment->created_at)); ?></span>
+                            </div>
+                            <div><?php echo $comment->comment; ?></div>
+                        </div>
+                <?php }} ?> 
+            </div>
         </div>
+    </main>
 
-      </div>
-    </section><!-- End Blog Section -->
+<script>
+    let text =<?php 
+    // echo json_encode($message); 
+    ?>;
+    // console.log(text)
+</script>
 
-  </main><!-- End #main -->
-
-  <?php
-    require_once('includes/footer.php');
-?>
+<?php include_layout_template("footer.php"); ?>

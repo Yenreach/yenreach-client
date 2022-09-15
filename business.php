@@ -1,5 +1,7 @@
 <?php
     require_once("../includes_public/initialize.php");
+    include("default_img.php");
+
     $url = $_SERVER['REQUEST_URI'];
     $exploded = explode("?", $url);
     
@@ -25,7 +27,7 @@
                             $cookies = perform_get_curl($gurl);
                             if($cookies){
                                 if($cookies->status == "success"){
-                                    $cookie = $cookies->data;
+                                    $cookie = $cookies->data; 
                                     $user_string = $cookie->cookie;
                                     setcookie("yenreach", $user_string, time() + (86400 * 365), "/"); // 86400 = 1 day
                                 } else {
@@ -111,6 +113,22 @@
     } else {
         die("Wrong Path");
     }
+    function formatString($str) {
+        $pattern = "/&lt;/i";
+        $pattern2 = "/&gt;/i";
+        $pattern3 = "/;nbsp;/i";
+        $pattern4 = "/&/i";
+        $pattern5 = "/amp;/i";
+        $pattern6 = "/#039;/i";
+        
+        $str = preg_replace($pattern, "<", $str);
+        $str = preg_replace($pattern2, ">", $str);
+        $str = preg_replace($pattern3, " ", $str);
+        $str = preg_replace($pattern4, "", $str);
+        $str = preg_replace($pattern5, "", $str);
+        $str = preg_replace($pattern6, "", $str);
+        return $str;
+      };
 ?>
 <html>
 <head>
@@ -192,19 +210,38 @@
         .card-image{
           background-color: none;
           width: 100%;
-          position: relative;
-          padding-top: 100%;
+          position: relative;   
+        }
+        /* @media only screen and (min-width:576px) {
+            .card-image{
+                padding-top: 100%;
+            }
+        } */
+        .card-business {
+            height: 300px;
+        }
+        @media only screen and (min-width:576px) {
+            .card-cont {
+            height: 370px;
+        }
+            .card-business{
+                height:150px;
+            }
+
         }
         
         .card-img {
-            position: absolute;
+            /* position: absolute; */
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
-            background-size:cover;
             background-repeat: no-repeat;
             background-position: center center;
+            background-size:cover;
+            object-fit: cover;
+
+
         }
 
       @media (max-width: 991.98px) {
@@ -300,50 +337,77 @@
 </head>
 <body>
     <?php include_layout_template("header.php"); ?>
-    <main class="col-12 mx-auto">
-        <div class="row">
-            <div class="carousel-inner" style="height: 35vh; background: #f1f1f1">
-                <div class="col-12 mx-auto d-flex h-75 mt-5 flex-column flex-lg-row justify-content-center align-items-center pt-lg-0">
-                    <div class="col-4 mx-auto py-1">
-                        <div class="media-center d-flex mx-auto align-items-center justify-content-center mb-4 mb-lg-0" style="width: 7rem">
+    <main class="col-12 mx-auto" style="margin-top:6rem">
+        <div class="" style="background: #f1f1f1">
+            <div class="container py-4 d-flex-md justify-content-center align-items-center" style="background: #f1f1f1">
+                <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center pt-lg-0">
+                    <div class="">
+                        <div class="media-center d-flex mx-auto align-items-center justify-content-center mb-4 mb-md-0" style="width: 7rem; height:7rem">
                             <?php
                                 if(!empty($business->filename)){
-                                    if(file_exists("images/{$business->filename}.jpg")){
-                            ?>
-                                        <img
-                                          src="images/<?php echo $business->filename.".jpg"; ?>"
-                                          alt="<?php echo $business->name; ?>"
-                                          width="100%"
-                                          height="auto"
-                                        />
-                            <?php
+                                    if(file_exists("images/thumbnails/".$business->filename.".jpg")){
+                                        $img = "images/thumbnails/".$business->filename.".jpg";
                                     } else {
-                            ?>
-                                        <img
-                                          src="assets/img/office_building.png"
-                                          alt="<?php echo $business->name; ?>"
-                                          width="100%"
-                                          height="100%"
-                                          style="border-radius: 50%"
-                                        />
-                            <?php
+                                        if(file_exists("images/".$business->filename.".jpg")){
+                                            $img =  "images/".$business->filename.".jpg";
+                                        } else {
+                                            if(!empty($business->photos)){
+                                                $photod = array_shift($business->photos);
+                                                if(!empty($photod->filename)){
+                                                    if(file_exists("images/thumbnails/{$photod->filename}.jpg")){
+                                                        $img = "images/thumbnails/{$photod->filename}.jpg";
+                                                    } elseif(file_exists($photod->filepath)){
+                                                        $img = $photod->filepath;
+                                                    } else {
+                                                        $img = "";
+                                                    }
+                                                } else {
+                                                    if(file_exists($photod->filepath)){
+                                                        $img = $photod->filepath;
+                                                    } else {
+                                                        $img = "";   
+                                                    }
+                                                }
+                                            } else {
+                                                $img = "";
+                                            }
+                                        }
                                     }
                                 } else {
-                            ?>
-                                    <img
-                                      src="assets/img/office_building.png"
-                                      alt="<?php echo $business->name; ?>"
-                                      width="100%"
-                                      height="100%"
-                                      style="border-radius: 50%"
-                                    />
-                            <?php
+                                    if(!empty($business->photos)){
+                                        $photod = array_shift($business->photos);
+                                        if(!empty($photod->filename)){
+                                            if(file_exists("images/thumbnails/{$photod->filename}.jpg")){
+                                                $img = "images/thumbnails/{$photod->filename}.jpg";
+                                            } elseif(file_exists($photod->filepath)){
+                                                $img = $photod->filepath;
+                                            } else {
+                                                $img = "";
+                                            }
+                                        } else {
+                                            if(file_exists($photod->filepath)){
+                                                echo $photod->filepath;
+                                            } else {
+                                                $img = "";   
+                                            }
+                                        }
+                                    } else {
+                                        $img = "";
+                                    }
                                 }
-                            ?>
+                                ?>
+                                <?php if (!empty($img)) {  ?>
+                                    <img class="position-relative" src="<?php echo $img; ?>" alt="<?php echo $business->name;  ?>" style="width:100%; height:100%; border-radius:50%">
+                                <?php $img=''; } else { 
+                                    echo '<div class="position-relative w-100 h-100 overflow-hidden rounded-circle">';
+                                        setBusinessImage($business->name);
+                                    echo '</div>';}
+                                    // echo setBusinessImage($business->name); }?>
+                                
                         </div>
                     </div>
-                    <div class='col-8'>
-                        <h1 class="text-success font-weight-bold mb-4 text-center px-lg-3 fs-6-sm fs-6 ">
+                    <div class=''>
+                        <h1 class="text-success font-weight-bold mb-4 mb-md-0 text-center fs-6-sm fs-6 ">
                             <?php echo $business->name; ?>
                             <?php echo output_message($message); ?>
                         </h1>
@@ -356,10 +420,27 @@
                 <div class="business-desc col-12 col-md-8 col-lg-6 mt-md-4 mx-md-auto py-3 text-center">
                     <h1 class="text-success mb-4 mb-md-2 fw-bold">Business Description</h1>
                     <p class="text-white text-wrap px-lg-2 text-justify mx-auto pr-0 text-muted">
-                        <?php
-                            echo nl2br($business->description);
+                        <p id='para'><?php
+                            $description_text = formatString($business->description);
+                            $desc_array = array();
+                            $explode_desc = explode(' ', $description_text);
+                            $explode_count = count($explode_desc);
+                            if($explode_count >= 30){
+                                for($i=0; $i<=30; $i++){
+                                    $desc_array[] = $explode_desc[$i];
+                                }
+                            } else {
+                                foreach($explode_desc as $desc){
+                                    $desc_array[] = $desc;
+                                }
+                            }
+                            echo join(' ', $desc_array)." ...";
+                            $name_array = explode(' ', $business->name);
+                            // $name = join('_', $name_array);
+                            // echo nl2br($business->description);
                             if($categories->status == "success"){
-                        ?>
+                        ?></p>
+                            <button onclick="readMore()" id="read" class= 'btn btn-success mb-4'>Read more</button>
                                 <p>
                                     <?php
                                         foreach($categories->data as $category){
@@ -438,12 +519,12 @@
         <?php
             }
         ?>
-        <div class="row contact-container mx-auto py-5 mt-5">
+        <div class="row contact-container mx-auto mt-5">
             <hr/>
             <div class="col-12 col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-around">
-                <div class="contact-info ps-4 mt-3 d-flex flex-column mb-5 mb-md-0 justify-content-around align-items-center" style="height: fit-content">
+                <div class="contact-info d-flex flex-column mb-5 mb-md-0 justify-content-around align-items-center" style="height: fit-content">
                     <h2 class="text-success text-center fs-2 fw-bold">Business Contact Details</h2>
-                    <div class="phone-number d-flex flex-column align-items-start h-50 py-3 my-2 ">
+                    <div class="phone-number d-flex flex-column align-items-start py-3 my-2 ">
                         <p class="text-main">
                             <i class="bi bi-geo me-2 py-2 rounded-md"></i>
                             <?php echo $business->address; ?>
@@ -467,30 +548,43 @@
                                     <tr>
                                         <td style="padding-left: 0 !important"><i class="bi bi-clock"></i></td>
                                         <td>
+                                        <table class='table table-sm'>
+                                            <thead >
+                                                <tr>
+                                                <th class='text-success' scope="col">Day</th>
+                                                <th class='text-success' scope="col">Opens</th>
+                                                <th class='text-success' scope="col">Closes</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
                                             <?php
                                                 function writeMsg($al){return substr($al,0,2);}
                                                 
                                                 foreach($hours->data as $hour){
-                                            ?>
-                                                    <table>
-                                                        <tr>
-                                                            <td class="px-2"><?php echo $hour->day; ?></td>
-                                                            <td class="px-2"><?php
-                                                                if(!empty($hour->opening_time)){
-                                                                    echo " ".$hour->opening_time."am";
-                                                                    if(!empty($hour->closing_time)){
-                                                                        $closing_time=strval(((int)writeMsg($hour->closing_time))-12);
-                                                                        echo " - ".$closing_time.":00pm";
-                                                                    }
-                                                                } else {
-                                                                    echo $hour->timing;
-                                                                }
-                                                            ?></td>
-                                                        </tr>
-                                                    </table>
+                                            ?>    
+                                                <tr>
+                                                    <td class="px-2"><?php echo $hour->day; ?></td>
+                                                    <td class="px-2"><?php
+                                                        if(!empty($hour->opening_time)){
+                                                            echo " ".$hour->opening_time."am";
+                                                        } else {
+                                                            echo $hour->timing;
+                                                        }
+                                                    ?></td>
+                                                    <td class="px-2"><?php
+                                                        if(!empty($hour->closing_time)){
+                                                            $closing_time=strval(((int)writeMsg($hour->closing_time))-12);
+                                                            echo $closing_time.":00pm";
+                                                        } else {
+                                                            echo $hour->timing;
+                                                        }
+                                                    ?></td>
+                                                </tr>
                                             <?php
                                                 }
                                             ?>
+                                            </tbody>
+                                        </table>
                                         </td>
                                     </tr>
                                 </table>
@@ -579,7 +673,7 @@
                                                 ?>
                                             </div>
                                             <div>
-                                                 <span class='text-success'>Or you can reach us on social media.</span>
+                                                <span class='text-success'>Or you can reach us on social media.</span>
                                             </div>
                                             <div class="social-media col-12 col-lg-8 mx-auto d-flex align-items-center justify-content-between justify-content-lg-evenly mt-3">
                                                 <?php
@@ -667,12 +761,12 @@
                     ?>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-around">
-                <div class="contact-info ps-4 mt-3 d-flex flex-column mb-5 mb-md-0 justify-content-around align-items-center" style="height: fit-content">
-                    <ul class="h-100 pb-4">
+            <div class="col-12 col-lg-6 col-md-6 col-sm-12 d-flex flex-column">
+                <div class="contact-info d-flex flex-column mb-5 mb-md-0 align-items-center" style="height: fit-content">
+                    <ul class="p-0 m-0">
                         <h2 class="text-success text-center fs-2 fw-bold">Available Facilities</h2>
-                        <div class="col-11 mx-auto d-flex align-items-center justify-content-center px-lg-4">
-                            <div class="d-block me-5">
+                        <div class="d-flex align-items-center justify-content-center text-center">
+                            <div class="d-block">
                                 <?php
                                     if(!empty($business->facilities)){
                                         $strings = explode(",", $business->facilities);
@@ -931,86 +1025,119 @@
             if($relateds->status == "success"){
         ?>
                 <div class="container">
-                    <div class="row" style="padding-top: 10px">
+                    <div class="" style="padding-top: 10px">
                         <h3 class="text-center text-success fw-bold fs-2">Recommended Businesses</h3>
-                        <?php
-                            foreach($relateds->data as $related){
-                        ?>
-                                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 mb-3">
-                                    <div class="card">
-                                        <div class="card-image" loading="lazy">
-                                            <div class="card-img" style="background-image: url(<?php
-                                                if(!empty($related->photos)){
-                                                    $photo = array_shift($related->photos);
-                                                    if(file_exists($photo->filepath)){
-                                                        echo $photo->filepath;
-                                                    } else {
-                                                        if(!empty($related->filename)){
-                                                            if(file_exists("images/thumbnails/".$related->filename.".jpg")){
-                                                                echo "images/thumbnails/".$related->filename.".jpg";
-                                                            } else {
-                                                                if(file_exists("images/".$related->filename.".jpg")){
-                                                                    echo "images/".$related->filename.".jpg";
-                                                                } else {
-                                                                    echo "assets/img/office_building.png";
-                                                                }
-                                                            }
-                                                        } else {
-                                                            echo "assets/img/office_building.png";
-                                                        }
-                                                    }
+                        <div class= "row">
+                            <?php
+                                foreach($relateds->data as $related){
+                            ?>
+                                <div class="col-12 col-lg-2 col-md-3 col-sm-4 mb-3">
+                                    <div class="card pb-3 card-cont">
+                                            <div class="card-image" loading="lazy">
+                                        <?php
+                                            if(!empty($related->photos)){
+                                                $photo = array_shift($related->photos);
+                                                if(file_exists($photo->filepath)){
+                                                $main_img = $photo->filepath;
                                                 } else {
                                                     if(!empty($related->filename)){
                                                         if(file_exists("images/thumbnails/".$related->filename.".jpg")){
-                                                            echo "images/thumbnails/".$related->filename.".jpg";
+                                                        $main_img = "images/thumbnails/".$related->filename.".jpg";
                                                         } else {
                                                             if(file_exists("images/".$related->filename.".jpg")){
-                                                                echo "images/".$related->filename.".jpg";
+                                                            $main_img = "images/".$related->filename.".jpg";
                                                             } else {
-                                                                echo "assets/img/office_building.png";
+                                                            $main_img = "";
                                                             }
                                                         }
                                                     } else {
-                                                        echo "assets/img/office_building.png";
+                                                    $main_img = "";
                                                     }
                                                 }
-                                            ?>)">&nbsp;
+                                            } else {
+                                                if(!empty($related->filename)){
+                                                    if(file_exists("images/thumbnails/".$related->filename.".jpg")){
+                                                    $main_img = "images/thumbnails/".$related->filename.".jpg";
+                                                    } else {
+                                                        if(file_exists("images/".$related->filename.".jpg")){
+                                                        $main_img = "images/".$related->filename.".jpg";
+                                                        } else {
+                                                        $main_img = "";
+                                                        }
+                                                    }
+                                                } else {
+                                                $main_img = "";
+                                                }
+                                            }
+                                        ?>
+                                        <?php if (!empty($main_img)) {  ?>
+                                            <div class="card-img" style="background-image: url(<?php echo $main_img; ?>)">
+                                        </div> 
+                                        <?php $main_img=''; } else {
+                                            echo setBusinessImage($related->name); }?>
+                                        </div>
+                                        <div class='d-flex justify-content-between flex-column bd-highlight h-100  px-2 pt-4'>
+                                            <div class="d-flex flex-column gap-2">
+                                                <div class="" style="">
+                                                    <h6><small><?php echo $related->name; ?></small></h6>
+                                                </div>
+                                                <div class='' style="">
+                                                        
+                                                    <?php
+                                                        if(!empty($related->categories)){
+                                                            echo '<p>';
+                                                            foreach($related->categories as $category){
+                                                                echo '<a href="#" style="margin-top: 1px; font-size:12px;color:#00C853" class="">#'.$category->category.'</a>';
+                                                            }
+                                                            echo '</p>';
+                                                        }
+                                                    ?>
+                
+                                                </div>
                                             </div>
-                                        
                                             
-                                        </div>
-                                        <div class='info-container'>
-                                        <div class="card-info">
-                                            <h6><small><?php echo $related->name; ?></small></h6>
-                                        </div>
-                                        <div class=' mx-2'>
-                                                
-                                            <?php
-                                                if(!empty($related->categories)){
-                                                    echo '<p>';
-                                                    foreach($related->categories as $category){
-                                                        echo '<a href="#" style="margin-top: 1px; font-size:12px;color:#00C853" class="m-2">#'.$category->category.'</a>';
-                                                    }
-                                                    echo '</p>';
-                                                }
-                                            ?>
-        
-                                        </div>
-                                        <div class="ms-2 w-100">
-                                            <a href="business?<?php echo $related->verify_string; ?>/<?php echo $related->state ?>/<?php echo $related->town ?>/<?php echo $related->name.".html"; ?>"
-                                            class="btn">View Business</a>
-                                        </div>
+                                            <div class="w-100" style="">
+                                                <a href="business?<?php echo $related->verify_string; ?>/<?php echo $related->state ?>/<?php echo $related->town ?>/<?php echo $related->name.".html"; ?>"
+                                                class="btn">View Business</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                        <?php
-                            }
-                        ?>
+                            
+                            <?php
+                                }
+                            ?>
+                        </div>
                     </div>
                 </div>
         <?php
             }
         ?>
     </main>
+    <script>
+        let text =<?php echo json_encode($description_text); ?>;
+        // console.log("text0",text)
+        let count = true;
+        function readMore() {
+            // console.log("clicked")
+        var para = document.getElementById("para");
+        var btn = document.getElementById('read');
+        const textList = text.split(' ');
+        let disp = ``;
+        if (count) {
+            btn.innerHTML = 'Read Less';
+            para.innerHTML = text; 
+            count = false;
+        } 
+        else {
+            btn.innerHTML = 'Read More';
+            for (let i=0; i<31; i++) {
+                disp +=  textList[i] + ' ';
+            }
+            para.innerHTML = disp + ' ...';
+            count = true;
+        }
+        }
+    </script>
 
 <?php include_layout_template("footer.php"); ?>

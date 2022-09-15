@@ -1,5 +1,6 @@
 <?php
     require_once("../includes_public/initialize.php");
+    include("default_img.php");
     
     $gurl = "fetch_home_businesses_api.php";
     $categories = perform_get_curl($gurl);
@@ -52,6 +53,11 @@
   <title>Yenreach.com - Online Business Directory</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
   
  <!-- Meta Pixel Code -->
 <script>
@@ -73,6 +79,17 @@
 <!-- End Meta Pixel Code -->
 
   <?php include_layout_template("links.php"); ?>
+  <style>
+    .carousel-img {
+        max-height: 40vh;
+        object-fit: contain;
+    }
+    @media screen and (min-width:600px) {
+        .carousel-img {
+            max-height: 70vh;
+        }
+    }
+  </style>
 </head>
 
 <body>
@@ -80,7 +97,7 @@
 <!-- ======= Header ======= -->
 <?php include_layout_template("header.php"); ?>
 
-<!--</header><!-- End Header -->
+<!--</header>< End Header -->
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class=" hero-container"  data-aos="zoom-out" data-aos-delay="100">
@@ -119,12 +136,22 @@
       </form>     
       </div>
       <!-- <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557204663/park-4174278_640.jpg" alt="hero-section-image" > -->
-      <div class="row row-top" id="first-slider"> 
+      <!-- <div class="row row-top" id="first-slider"> 
     </div>
     <div class="row row-top" id="second-slider">
   </div>
     <div class="row row-top" id="third-slider">
-  </div>
+  </div> -->
+  <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide row-top" id="first-slider">Slide 1</div>
+            <div class="swiper-slide row-top" id="second-slider">Slide 2</div>
+            <div class="swiper-slide row-top" id="third-slider">Slide 3</div>
+        </div>
+
+    </div>
   <!--  <div class="row row-top" id="third-slider">-->
   <!--</div>-->
     </div>
@@ -183,42 +210,46 @@
                                             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                                                 <div class="card business-card-section d-flex flex-column justify-content-around align-items-start">
                                                     <div class='w-100 business-image-container'>
-                                                        <img src="<?php
+                                                    <?php
                                                             if(!empty($business->photos)){
                                                                 $photo = array_shift($business->photos);
                                                                 if(file_exists($photo->filepath)){
-                                                                    echo $photo->filepath;
+                                                                    $main_img = $photo->filepath;
                                                                 } else {
                                                                     if(!empty($business->filename)){
                                                                         if(file_exists("images/thumbnails/".$business->filename.".jpg")){
-                                                                            echo "images/thumbnails/".$business->filename.".jpg";
+                                                                            $main_img = "images/thumbnails/".$business->filename.".jpg";
                                                                         } else {
                                                                             if(file_exists("images/".$business->filename.".jpg")){
-                                                                                echo "images/".$business->filename.".jpg";
+                                                                                $main_img = "images/".$business->filename.".jpg";
                                                                             } else {
-                                                                                echo "assets/img/office_building.png";
+                                                                                "";
                                                                             }
                                                                         }
                                                                     } else {
-                                                                        echo "assets/img/office_building.png";
+                                                                        "";
                                                                     }
                                                                 }
                                                             } else {
                                                                 if(!empty($business->filename)){
                                                                     if(file_exists("images/thumbnails/".$business->filename.".jpg")){
-                                                                        echo "images/thumbnails/".$business->filename.".jpg";
+                                                                        $main_img = "images/thumbnails/".$business->filename.".jpg";
                                                                     } else {
                                                                         if(file_exists("images/".$business->filename.".jpg")){
-                                                                            echo "images/".$business->filename.".jpg";
+                                                                            $main_img = "images/".$business->filename.".jpg";
                                                                         } else {
-                                                                            echo "assets/img/office_building.png";
+                                                                            "";
                                                                         }
                                                                     }
                                                                 } else {
-                                                                    echo "assets/img/office_building.png";
+                                                                    "";
                                                                 }
                                                             }
-                                                        ?>" class="card-img-top h-100 w-100"  alt="<?php echo $business->name; ?>">
+                                                        ?>
+                                                        <?php if (!empty($main_img)) {  ?>
+                                                            <img src="<?php echo $main_img; ?>" class="card-img-top h-100 w-100"  alt="<?php echo $business->name; ?>">
+                                                        <?php $main_img=''; } else {
+                                                            echo setBusinessImage($business->name); }?>
                                                     </div>
                                                     <div class="card-body w-100 d-flex flex-column justify-content-evenly align-items-start">
                                                         <h4 class="text-wrap text-uppercase"><?php echo $business->name; ?></h4>
@@ -249,6 +280,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                 <?php
                                     }
                                 ?>
@@ -269,42 +301,46 @@
                                             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                                                 <div class="card business-card-section d-flex flex-column justify-content-around align-items-start">
                                                     <div class='w-100 business-image-container'>
-                                                        <img src="<?php
-                                                                    if(!empty($business->photos)){
-                                                                        $photo = array_shift($business->photos);
-                                                                        if(file_exists($photo->filepath)){
-                                                                            echo $photo->filepath;
+                                                        <?php
+                                                            if(!empty($business->photos)){
+                                                                $photo = array_shift($business->photos);
+                                                                if(file_exists($photo->filepath)){
+                                                                    $main_img = $photo->filepath;
+                                                                } else {
+                                                                    if(!empty($business->filename)){
+                                                                        if(file_exists("images/thumbnails/".$business->filename.".jpg")){
+                                                                            $main_img = "images/thumbnails/".$business->filename.".jpg";
                                                                         } else {
-                                                                            if(!empty($business->filename)){
-                                                                                if(file_exists("images/thumbnails/".$business->filename.".jpg")){
-                                                                                    echo "images/thumbnails/".$business->filename.".jpg";
-                                                                                } else {
-                                                                                    if(file_exists("images/".$business->filename.".jpg")){
-                                                                                        echo "images/".$business->filename.".jpg";
-                                                                                    } else {
-                                                                                        echo "assets/img/office_building.png";
-                                                                                    }
-                                                                                }
+                                                                            if(file_exists("images/".$business->filename.".jpg")){
+                                                                                $main_img = "images/".$business->filename.".jpg";
                                                                             } else {
-                                                                                echo "assets/img/office_building.png";
+                                                                                "";
                                                                             }
                                                                         }
                                                                     } else {
-                                                                        if(!empty($business->filename)){
-                                                                            if(file_exists("images/thumbnails/".$business->filename.".jpg")){
-                                                                                echo "images/thumbnails/".$business->filename.".jpg";
-                                                                            } else {
-                                                                                if(file_exists("images/".$business->filename.".jpg")){
-                                                                                    echo "images/".$business->filename.".jpg";
-                                                                                } else {
-                                                                                    echo "assets/img/office_building.png";
-                                                                                }
-                                                                            }
+                                                                        "";
+                                                                    }
+                                                                }
+                                                            } else {
+                                                                if(!empty($business->filename)){
+                                                                    if(file_exists("images/thumbnails/".$business->filename.".jpg")){
+                                                                        $main_img = "images/thumbnails/".$business->filename.".jpg";
+                                                                    } else {
+                                                                        if(file_exists("images/".$business->filename.".jpg")){
+                                                                            $main_img = "images/".$business->filename.".jpg";
                                                                         } else {
-                                                                            echo "assets/img/office_building.png";
+                                                                            "";
                                                                         }
                                                                     }
-                                                                ?>" class="card-img-top h-100 w-100"  alt="<?php echo $business->name; ?>">
+                                                                } else {
+                                                                    "";
+                                                                }
+                                                            }
+                                                        ?>
+                                                        <?php if (!empty($main_img)) {  ?>
+                                                            <img src="<?php echo $main_img; ?>" class="card-img-top h-100 w-100"  alt="<?php echo $business->name; ?>">
+                                                        <?php $main_img=''; } else {
+                                                            echo setBusinessImage($business->name); }?>
                                                     </div>
                                                     <div class="card-body w-100 d-flex flex-column justify-content-evenly align-items-start">
                                                         <h4 class="text-wrap text-uppercase"><?php echo $business->name; ?></h4>
@@ -345,40 +381,40 @@
     ?>
     
 
-<!--<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">-->
-<!--  <div class="carousel-inner shadow">-->
-<!--    <div class="carousel-item item active d-flex ">-->
-<!--      <div class="ads-image-container">-->
-<!--              <img src="./assets/img/ads-image.jpg" alt="advert banner" >-->
-<!--      </div>-->
-<!--      <div class="ads-text-container-->
-<!--      d-flex flex-column align-items-center justify-content-center">-->
-<!--       <p class="fs-4 text-center">Advertise your business here</p>-->
-<!--       <a href="yenreach_billboard" class="btn px-4 py-2">Learn more</a>-->
-<!--     </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--<div id="carouselExampleInterval" class="carousel slide mt-4" data-bs-ride="carousel">-->
-<!--  <div class="carousel-inner shadow">-->
-<!--    <div class="carousel-item item active d-flex  ">-->
-<!--      <div class="ads-image-container">-->
-<!--        <img src="./assets/img/hero-two.jpg" alt="advert-banner" >-->
-<!--      </div>-->
-<!--      <div class="ads-text-container-->
-<!--      d-flex flex-column align-items-center justify-content-center">-->
-<!--           <h2 class="text-capitalize fw-bold">Omotolani Olurotimi.</h2>-->
-<!--       <p class="fs-6 w-75 text-center fw-light text-dark">-->
-<!--        We currently live in a global village, and this had been made possible through digital and web based technology, thus making it really easy for brands and businesses to reach their target audience. Omotolani Olurotimi is here to ensure that your business, aspirations, plans and projects are achieved alongside the the goal of getting them to the right people.-->
-<!--       </p>-->
-<!--       <p class="fs-4 text-center"></p>-->
-<!--       <button class="btn px-4 py-2">Learn more</button>-->
-<!--     </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+        <!--<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">-->
+        <!--  <div class="carousel-inner shadow">-->
+        <!--    <div class="carousel-item item active d-flex ">-->
+        <!--      <div class="ads-image-container">-->
+        <!--              <img src="./assets/img/ads-image.jpg" alt="advert banner" >-->
+        <!--      </div>-->
+        <!--      <div class="ads-text-container-->
+        <!--      d-flex flex-column align-items-center justify-content-center">-->
+        <!--       <p class="fs-4 text-center">Advertise your business here</p>-->
+        <!--       <a href="yenreach_billboard" class="btn px-4 py-2">Learn more</a>-->
+        <!--     </div>-->
+        <!--    </div>-->
+        <!--  </div>-->
+        <!--</div>-->
+        <!--<div id="carouselExampleInterval" class="carousel slide mt-4" data-bs-ride="carousel">-->
+        <!--  <div class="carousel-inner shadow">-->
+        <!--    <div class="carousel-item item active d-flex  ">-->
+        <!--      <div class="ads-image-container">-->
+        <!--        <img src="./assets/img/hero-two.jpg" alt="advert-banner" >-->
+        <!--      </div>-->
+        <!--      <div class="ads-text-container-->
+        <!--      d-flex flex-column align-items-center justify-content-center">-->
+        <!--           <h2 class="text-capitalize fw-bold">Omotolani Olurotimi.</h2>-->
+        <!--       <p class="fs-6 w-75 text-center fw-light text-dark">-->
+        <!--        We currently live in a global village, and this had been made possible through digital and web based technology, thus making it really easy for brands and businesses to reach their target audience. Omotolani Olurotimi is here to ensure that your business, aspirations, plans and projects are achieved alongside the the goal of getting them to the right people.-->
+        <!--       </p>-->
+        <!--       <p class="fs-4 text-center"></p>-->
+        <!--       <button class="btn px-4 py-2">Learn more</button>-->
+        <!--     </div>-->
+        <!--    </div>-->
+        <!--  </div>-->
+        <!--</div>-->
 
-<div
+    <div
         id="carouselExampleCaptions"
         class="carousel slide mt-4"
         data-bs-ride="carousel"
@@ -407,64 +443,121 @@
           <!--  </div>-->
           <!--  </div>-->
           <!--</div>-->
-          <div class="carousel-item active">
+            <div class="carousel-item active">
                 <div class='h-100  d-flex justify-content-center align-items-center row'>
+                        
                     
-                
-            <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3">
-              <img src="./assets/img/DEC_Image.jpg" alt="advert-banner" class='w-100' />
+                    <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3">
+                        <img src="./assets/img/DEC_Image.jpg" alt="advert-banner" class='w-100 carousel-img' />
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
+                        <h2 class=" text-capitalize fw-bold text-black">Dordorian Estate Limited</h2>
+                        <p class="fs-6 w-75 text-center fw-light text-dark">
+                        Own your dream Property in Fast developing locations across Yenagoa, Bayelsa State.
+                        </p>
+                        <p class="fs-4 text-center"></p>
+                        <a href="https://dordorianestate.com" target="_blank" class="btn px-4 py-2">Learn more</a>
+                    </div>
+                </div>
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
-               <h2 class=" text-capitalize fw-bold text-black">Dordorian Estate Limited</h2>
-              <p class="fs-6 w-75 text-center fw-light text-dark">
-                Own your dream Property in Fast developing locations across Yenagoa, Bayelsa State.
-              </p>
-              <p class="fs-4 text-center"></p>
-              <a href="https://dordorianestate.com" target="_blank" class="btn px-4 py-2">Learn more</a>
+            <div class="carousel-item">
+                <div class='h-100  d-flex justify-content-center align-items-center row'>
+                        
+                    
+                    <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3">
+                        <img src="./images/LOGO_4491659091525.jpg" alt="advert-banner" class='w-100 carousel-img' />
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
+                        <h2 class=" text-capitalize fw-bold text-black">Globus Bank</h2>
+                        <p class="fs-6 w-75 text-center fw-light text-dark">
+                            A commercial bank with National Authorization. Registered as a limited liability company on March 6, 2019, licensed by the Central Bank of Nigeria on July 10, 2019 and commenced operations on November 6, 2019.
+                        </p>
+                        <p class="fs-4 text-center"></p>
+                        <a href="business?3b103aaa17b1e28da751caa93e1c67aa11515838" class="btn px-4 py-2">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
             </div>
+            <div class="carousel-item">
+                <div class='h-100  d-flex justify-content-center align-items-center row'>
+                        
+                    
+                    <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3 max-vh-100">
+                        <img src="./assets/img/clients/business/Screenshot_20211103-132259.png" alt="advert-banner" class='w-100 carousel-img' />
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
+                        <h2 class=" text-capitalize fw-bold text-black text-center">Mutual Benefits Life Assurance Limited</h2>
+                        <p class="fs-6 w-75 text-center fw-light text-dark">
+                         One of Nigeria's leading life Insurance provider with products ranging from, *Children Education Plan *Individual Savings Plan *Group life *General Third Party Liability *Professional Indemnity *Public Liability *Comprehensive Car Insurance *Mutual Term Assurance *Goods -in-transit E.T.C 
+                        </p>
+                        <p class="fs-4 text-center"></p>
+                        <a href="business?bfd9cc92264da47e591e505e860f143ef5d69eba" class="btn px-4 py-2">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-        <?php
-            if($billboards->status == "success"){
-                foreach($billboards->data as $billboard){
-        ?>
-                    <div class="carousel-item">
-                        <div class="h-100 d-flex justify-content-center align-items-center row">
-                            <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3">
-                                <img src="images/<?php echo $billboard->filename.".jpg"; ?>" alt="<?php echo $billboard->title; ?>" class="w-100" />
-                            </div>
-                            <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
-                                <h2 class="text-capitalize fw-bold text-black"><?php echo $billboard->title; ?></h2>
-                                <p class="fs-6 w-75 text-center fw-light text-dark"><?php echo nl2br($billboard->text); ?></p>
-                                <p class="fs-4 text-center">
-                                    <a href="<?php echo call_to_action_link($billboard->call_to_action_link, $billboard->call_to_action_type) ?>" target="_blank" class="btn px-4 py-2"><?php echo $billboard->call_to_action_type; ?></a>
-                                </p>
+            <div class="carousel-item">
+                <div class='h-100  d-flex justify-content-center align-items-center row'>
+                        
+                    
+                    <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3 max-vh-100">
+                        <img src="./assets/img/datascience.jpg" alt="advert-banner" class='w-100 carousel-img' />
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
+                        <h2 class=" text-capitalize fw-bold text-black text-center">BYS GRADUATE SCHOOL - Data Science Course</h2>
+                        <p class="fs-6 w-75 text-center fw-light text-dark">
+                            BYS Graduate School (Bayelsa) in conjunction with Analytics School (Lagos) presents a 1 month Data Analytics Training. Featuring Excel, Power BI and SQL
+                        </p>
+                        <p class="fs-4 text-center"></p>
+                        <a target="_blank" href="http://bysgradschool.com" class="btn px-4 py-2">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if($billboards->status == "success"){
+                    foreach($billboards->data as $billboard){
+            ?>
+                        <div class="carousel-item">
+                            <div class="h-100 d-flex justify-content-center align-items-center row">
+                                <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3">
+                                    <img src="images/<?php echo $billboard->filename.".jpg"; ?>" alt="<?php echo $billboard->title; ?>" class="w-100" />
+                                </div>
+                                <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
+                                    <h2 class="text-capitalize fw-bold text-black"><?php echo $billboard->title; ?></h2>
+                                    <p class="fs-6 w-75 text-center fw-light text-dark"><?php echo nl2br($billboard->text); ?></p>
+                                    <p class="fs-4 text-center">
+                                        <a href="<?php echo call_to_action_link($billboard->call_to_action_link, $billboard->call_to_action_type) ?>" target="_blank" class="btn px-4 py-2"><?php echo $billboard->call_to_action_type; ?></a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-        <?php
-                }
-            }  
-        ?>
+            <?php
+                    }
+                }  
+            ?>
           
           
-          <div class="carousel-item">
+            <div class="carousel-item">
                 <div class='h-100  d-flex justify-content-center align-items-center row'>
                     
                 
-            <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3">
-              <img src="./assets/img/ads-image.jpg" alt="advert-banner" class='w-100' />
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
+                    <div class="h-50 col-lg-6 col-md-6 col-sm-12 my-3">
+                        <img src="./assets/img/ads-image.jpg" alt="advert-banner" class='w-100' />
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center h-50 col-lg-6 col-md-6 col-sm-12">
                <!--<h2 class=" text-capitalize fw-bold text-black">Omotolani Olurotimi.</h2>-->
-              <p class="fs-6 w-75 text-center fw-light text-dark">
-                Advertise your business here
-              </p>
-              <p class="fs-4 text-center"></p>
-              <a href="yenreach_billboard" class="btn px-4 py-2">Learn more</a>
+                        <p class="fs-6 w-75 text-center fw-light text-dark">
+                            Advertise your business here
+                        </p>
+                        <p class="fs-4 text-center"></p>
+                        <a href="yenreach_billboard" class="btn px-4 py-2">Learn more</a>
+                    </div>
+                </div>
             </div>
-            </div>
-          </div>
          
         </div>
         <button
@@ -485,48 +578,50 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-        <div class="row">
+            <div class="row">
 
-          <!-- <div class="col-lg-4 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-people" style='font-size:50px'></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Visitors Today</p>
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="count-box">
+                    <i class="bi bi-people" style='font-size:50px'></i>
+                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Visitors Today</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                    <div class="count-box">
+                    <i class="bi bi-emoji-smile"  style='font-size:50px'></i>
+                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Live Users</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="bi bi-journal-richtext"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="<?php //echo $answer['total'];?>" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Listed Businesses</p>
+                    </div>
+                </div>-->
+
+                <!-- <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                    <i class="bi bi-headset"  style='font-size:50px'></i>
+                    <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Hours of Support</p>
+                    </div>
+                </div>
+
+                </div>  -->
+
             </div>
-          </div>
+        </div>
 
-          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-            <i class="bi bi-emoji-smile"  style='font-size:50px'></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Live Users</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div class="count-box">
-                <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="<?php //echo $answer['total'];?>" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Listed Businesses</p>
-            </div>
-          </div>-->
-
-          <!-- <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-headset"  style='font-size:50px'></i>
-              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours of Support</p>
-            </div>
-          </div>
-
-        </div>  -->
-
-      </div>
     </section><!-- End Counts Section -->
 
 
@@ -535,89 +630,93 @@
             $busy = $weeks->data;
     ?>
             <!-- ======= Services Section ======= -->
-            <section id="services" class="services section-bg ">
-              <div class="container" data-aos="fade-up">
+            <section id="services" class="services section-bg">
+                <div class="container" data-aos="fade-up">
         
-                <div class="section-title">
-                  <h2 class="text-capitalize">Business Of the week</h2>
-                  <p>This business was the most visited business on Yenreach in the past week</p>
-                </div>
-        
-                <div id="home-list" class="row">
-                  <div class="business-week shadow carousel-item d-flex bg-white my-4" >
-                    <div class="ads-image-container">
-                      <img src="<?php
-                        if(!empty($busy->filename)){
-                            if(file_exists("images/thumbnails/".$busy->filename.".jpg")){
-                                echo "images/thumbnails/".$busy->filename.".jpg";
-                            } else {
-                                if(file_exists("images/".$busy->filename.".jpg")){
-                                    echo "images/".$busy->filename.".jpg";
+                    <div class="section-title">
+                        <h2 class="text-capitalize">Business Of the week</h2>
+                        <p>This business was the most visited business on Yenreach in the past week</p>
+                    </div>
+            
+                    <div id="home-list" class="">
+                        <div class="business-week my-4 p-0 bg-white" >
+                            <div class="ads-image-container">
+                            <?php
+                                if(!empty($busy->filename)){
+                                    if(file_exists("images/thumbnails/".$busy->filename.".jpg")){
+                                        $img = "images/thumbnails/".$busy->filename.".jpg";
+                                    } else {
+                                        if(file_exists("images/".$busy->filename.".jpg")){
+                                            $img =  "images/".$busy->filename.".jpg";
+                                        } else {
+                                            if(!empty($busy->photos)){
+                                                $photod = array_shift($busy->photos);
+                                                if(!empty($photod->filename)){
+                                                    if(file_exists("images/thumbnails/{$photod->filename}.jpg")){
+                                                        $img = "images/thumbnails/{$photod->filename}.jpg";
+                                                    } elseif(file_exists($photod->filepath)){
+                                                        $img = $photod->filepath;
+                                                    } else {
+                                                        $img = "";
+                                                    }
+                                                } else {
+                                                    if(file_exists($photod->filepath)){
+                                                        $img = $photod->filepath;
+                                                    } else {
+                                                        $img = "";   
+                                                    }
+                                                }
+                                            } else {
+                                                $img = "";
+                                            }
+                                        }
+                                    }
                                 } else {
                                     if(!empty($busy->photos)){
                                         $photod = array_shift($busy->photos);
                                         if(!empty($photod->filename)){
                                             if(file_exists("images/thumbnails/{$photod->filename}.jpg")){
-                                                echo "images/thumbnails/{$photod->filename}.jpg";
+                                                $img = "images/thumbnails/{$photod->filename}.jpg";
                                             } elseif(file_exists($photod->filepath)){
-                                                echo $photod->filepath;
+                                                $img = $photod->filepath;
                                             } else {
-                                                echo "assets/img/office_building.png";
+                                                $img = "";
                                             }
                                         } else {
                                             if(file_exists($photod->filepath)){
                                                 echo $photod->filepath;
                                             } else {
-                                                echo "assets/img/office_building.png";   
+                                                $img = "";   
                                             }
                                         }
                                     } else {
-                                        echo "assets/img/office_building.png";
+                                        $img = "";
                                     }
                                 }
-                            }
-                        } else {
-                            if(!empty($busy->photos)){
-                                $photod = array_shift($busy->photos);
-                                if(!empty($photod->filename)){
-                                    if(file_exists("images/thumbnails/{$photod->filename}.jpg")){
-                                        echo "images/thumbnails/{$photod->filename}.jpg";
-                                    } elseif(file_exists($photod->filepath)){
-                                        echo $photod->filepath;
-                                    } else {
-                                        echo "assets/img/office_building.png";
-                                    }
-                                } else {
-                                    if(file_exists($photod->filepath)){
-                                        echo $photod->filepath;
-                                    } else {
-                                        "assets/img/office_building.png";   
-                                    }
-                                }
-                            } else {
-                                echo "assets/img/office_building.png";
-                            }
-                        }
-                      ?>" alt="<?php echo $busy->name; ?>" >
+                                ?>
+                                <?php if (!empty($img)) {  ?>
+                                    <img src="<?php echo $img; ?>" alt="<?php echo $busy->name; ?>" >
+                                <?php $img=''; } else {
+                                    echo setBusinessImage($business->name); }?>
+                                
+                            </div>
+                            <div class="ads-text-container overflow-auto text-center py-4">
+                                <h4 class="text-center"><?php echo $busy->name; ?></h4>
+                                <p class="text-center w-75 mx-auto">
+                                    <?php echo substr($busy->description, 0, 400)."..."; ?>
+                                </p> 
+                                <a href="business?<?php echo $busy->verify_string; ?>/<?php echo $busy->state ?>/<?php echo $busy->town ?>/<?php echo $busy->name.".html"; ?>" class="btn btn-success mx-auto px-4 py-2">View business</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ads-text-container flex-column align-items-center justify-content-center overflow-auto ">
-                      <h4 class="text-center"><?php echo $busy->name; ?></h4>
-                     <p class="text-center w-75">
-                         <?php echo $busy->description; ?>
-                     </p> 
-                     
-                     <a href="business?<?php echo $busy->verify_string; ?>/<?php echo $busy->state ?>/<?php echo $busy->town ?>/<?php echo $busy->name.".html"; ?>" class="btn btn-success px-4 py-2">View business</a>
-                   </div>
-                  </div>
-                </div>
-              </div> 
+                </div> 
             
             </section><!-- End Services Section -->
     <?php
         }
     ?>
 
-  </main><!-- End #main -->
+</main><!-- End #main -->
 
 <footer id="footer">
 
@@ -634,8 +733,8 @@
           <li><i class="bx bx-chevron-right"></i> <a href="contact">Contact Us</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="add-business">Add My Business</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="faqs">FAQs</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="terms">Terms of service</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="privacy_policy">Privacy policy</a></li>
         </ul>
       </div>
 
@@ -647,9 +746,6 @@
           <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries#bmc">BusiTech Model College</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries#tec">TEC Industrial Park</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries#btu">BusiTech University</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries#bbm">BYS Business Magazine</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries#de">Dordorian Estate</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="professional_courses">Professional Certification Programs</a></li>
         </ul>
       </div>
       <div class="col-lg-6 col-md-6 footer-newsletter">
@@ -683,7 +779,20 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="assets/js/index.js?v=1.0"></script>
+<script>
+          const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+          autoplay: {
+            delay: 4500,
+         },
+         speed: 850,
+        });
+    </script>
 </body>
 
 </html>
+

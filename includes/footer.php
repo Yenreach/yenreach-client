@@ -14,8 +14,8 @@
             <li><i class="bx bx-chevron-right"></i> <a href="contact.php">Contact Us</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="add-business.php">Add My Business</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="faqs.php">FAQs</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="terms.html">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="policy.html">Privacy policy</a></li>
           </ul>
         </div>
 
@@ -27,9 +27,6 @@
             <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#bmc">BusiTech Model College</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#tec">TEC Industrial Park</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#btu">BusiTech University</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#bbm">BYS Business Magazine</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="subsidiaries.php#de">Dordorian Estate</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="professional_courses.php">Professional Certification Programs</a></li>
           </ul>
         </div>
 

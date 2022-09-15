@@ -1,5 +1,6 @@
 <?php
     require_once("../includes_public/initialize.php");
+    include("default_img.php");
     $search_string = !empty($_GET['search']) ? urldecode($_GET['search']) : "";
     $location = !empty($_GET['location']) ? urldecode($_GET['location']) : "";
     
@@ -79,7 +80,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
 />
-
+<link rel="stylesheet" href="/assets/css/style.css" />
 <link rel="stylesheet" href="/assets/css/index.css" />
    <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
@@ -275,47 +276,49 @@
                     ?>
                                 <div class="col-12 col-lg-3 col-md-4" >
                                     <div class="card">
-                                        <div class="card-image" loading="lazy">
-                                            <div class="card-img" style="background-image: url(<?php
-                                                if(!empty($business->photos)){
-                                                    $photo = array_shift($business->photos);
-                                                    if(file_exists($photo->filepath)){
-                                                        echo $photo->filepath;
+                                    <div class="card-image" loading="lazy">
+                                  <?php
+                                        if(!empty($business->photos)){
+                                            $photo = array_shift($business->photos);
+                                            if(file_exists($photo->filepath)){
+                                              $main_img = $photo->filepath;
+                                            } else {
+                                                if(!empty($business->filename)){
+                                                    if(file_exists("images/thumbnails/".$business->filename.".jpg")){
+                                                      $main_img = "images/thumbnails/".$business->filename.".jpg";
                                                     } else {
-                                                        if(!empty($business->filename)){
-                                                            if(file_exists("images/thumbnails/".$business->filename.".jpg")){
-                                                                echo "images/thumbnails/".$business->filename.".jpg";
-                                                            } else {
-                                                                if(file_exists("images/".$business->filename.".jpg")){
-                                                                    echo "images/".$business->filename.".jpg";
-                                                                } else {
-                                                                    echo "assets/img/office_building.png";
-                                                                }
-                                                            }
+                                                        if(file_exists("images/".$business->filename.".jpg")){
+                                                          $main_img = "images/".$business->filename.".jpg";
                                                         } else {
-                                                            echo "assets/img/office_building.png";
+                                                          $main_img = "";
                                                         }
                                                     }
                                                 } else {
-                                                    if(!empty($business->filename)){
-                                                        if(file_exists("images/thumbnails/".$business->filename.".jpg")){
-                                                            echo "images/thumbnails/".$business->filename.".jpg";
-                                                        } else {
-                                                            if(file_exists("images/".$business->filename.".jpg")){
-                                                                echo "images/".$business->filename.".jpg";
-                                                            } else {
-                                                                echo "assets/img/office_building.png";
-                                                            }
-                                                        }
+                                                  $main_img = "";
+                                                }
+                                            }
+                                        } else {
+                                            if(!empty($business->filename)){
+                                                if(file_exists("images/thumbnails/".$business->filename.".jpg")){
+                                                  $main_img = "images/thumbnails/".$business->filename.".jpg";
+                                                } else {
+                                                    if(file_exists("images/".$business->filename.".jpg")){
+                                                      $main_img = "images/".$business->filename.".jpg";
                                                     } else {
-                                                        echo "assets/img/office_building.png";
+                                                      $main_img = "";
                                                     }
                                                 }
-                                            ?>)">&nbsp;
-                                            </div>
-                                        
-                                            
-                                        </div>
+                                            } else {
+                                              $main_img = "";
+                                            }
+                                        }
+                                    ?>
+                                    <?php if (!empty($main_img)) {  ?>
+                                      <div class="card-img" style="background-image: url(<?php echo $main_img; ?>)">
+                                      </div> 
+                                    <?php $main_img=''; } else {
+                                        echo setBusinessImage($business->name); }?>
+                                  </div>
                                         <div class='info-container'>
                                         <div class="card-info">
                             
@@ -428,8 +431,8 @@
           <li><i class="bx bx-chevron-right"></i> <a href="contact.php">Contact Us</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="add-business.php">Add My Business</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="faqs.php">FAQs</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="terms.html">Terms of service</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="policy.html">Privacy policy</a></li>
         </ul>
       </div>
 

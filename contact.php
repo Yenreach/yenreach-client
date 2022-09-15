@@ -1,12 +1,15 @@
 <?php
-    require_once('config/connect.php');
+    // require_once('config/connect.php');
     require_once('includes/header.php');
 ?>
 
 <main id="main">
+<?php
+    require_once('layouts/header.php');
+?>
 
     <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
+    <!-- <section class="breadcrumbs">
       <div class="container">
 
         <ol>
@@ -16,10 +19,11 @@
         <h2>Conatct Us</h2>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section> -->
+    <!-- End Breadcrumbs -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact mt-5">
       <div class="container" data-aos="fade-up">
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">

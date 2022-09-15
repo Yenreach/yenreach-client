@@ -36,14 +36,21 @@
                         $complete = $complete_registration->data;
                         
                         if($upload == "yes"){
-                            if($file['size'] <= 204800){
+                            if($file['size'] <= 1204800){
                                 $photo = new Photo();
                                 $photo->filename = $complete->filename;
                                 $photo->load($file['tmp_name']);
-                                $photo->save_logo_compressed();
+                                if($file['size'] <= 304800){
+                                    $photo->save_logo_compressed();
+                                }
+                                elseif ($file['size'] <= 700800) {
+                                    $photo->save_logo_compressed($extension="jpg", $compression=50, $permissions=null);
+                                }
+                                else {
+                                    $photo->save_logo_compressed($extension="jpg", $compression=30, $permissions=null);
+                                }
                                 $photo->scale(30);
                                 $photo->save_logo_thumbnail("jpg", 40, null);
-                                
                                 $lpurl = "add_activity_log_api.php";
                                 $lpdata = [
                                         'agent_type' => "user",
@@ -57,7 +64,7 @@
                                 $session->message("Business has been registered succesfully");
                                 redirect_to("business_profile");
                             } else {
-                                $message = "Image must not be more than 200KB";
+                                $message = "Image must not be more than 1MB";
                             }
                         } else {
                             $session->message("Business has been registered succesfully");
@@ -99,45 +106,32 @@
                 flex-direction: column;
             }
             
-            .file__upload {
-                width: 400px;
-                height: 445px;
-                margin: 20px;
+           .file__upload {
+                max-width: 400px;
+                /* height: 445px; */
                 box-shadow: 0 0 20px rgba(0,0,0,.3);
-            }
+            }  
             
-            .file__upload .header {
+            .header {
                 width: 100%;
-                height: 145px;
-                background: #00C853;
-                padding: 20px;
+                background: white;
+                padding: 40px 20px 40px 20px;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
+                border-bottom: 1px solid #e0e0e0;
                 border-radius: 5px 5px 0 0;
             }
             
-            .file__upload .header p {
-                color: #FFF;
+            .header span {
+                color: #00C853;
+                font-size: 1.5rem;
             }
-            
-            .file__upload .header p i.fa {
-                margin-right: 10px;
-            }
-            
-            .file__upload .header p span {
-                font-size: 2rem;
-                font-weight: 100;
-            }
-            
-            .file__upload .header p span span {
-                font-weight: 600;
-            }
-            
-            .file__upload .body {
+            .container {
                 background: #FFF;
+                padding: 30px 5px;
                 width: 100%;
-                height: calc(100% - 145px);
+                /* height: calc(100% - 145px); */
                 border-radius: 0 0 5px 5px;
                 display: flex;
                 justify-content: center;
@@ -145,115 +139,103 @@
                 flex-direction: column;
                 text-align: center;
             }
-            
-            .file__upload .body input[type="file"] {
-                opacity: 0.3;
-            
+            input {
+                opacity: 0;
             }
-            
-            .file__upload .body i.fa {
-                color: #d3d3d3;
-                margin-bottom: 20px;
+
+            label {
+            display:inline-block;
+            padding: 15px 15px;
+            text-align:center;
+            background:#00C853;
+            color:#fff;
+            font-size:15px;
+            font-weight:600;
+            border-radius:10px;
+            cursor:pointer;
             }
-            
-            .file__upload .body p strong {
-                color: #00C853;
+
+            .preview {
+                margin-top: 20px;
+                width: 100%;
             }
-            
-            .file__upload .body p span {
-                color: #00C853;
-                text-decoration: underline;
-            }
-            
-            .file__upload button.button {
-                background: #00C853;
-                border: none;
-                outline: none;
-                margin: 20px 0;
-                padding: .7rem 2rem;
-                font-size: 1.3rem;
-                color: #FFF;
-                border-radius: 3px;
-                opacity: .8;
-                cursor: pointer;
-                transition: .3s;
-            }
-            
-            .file__upload button.button:hover {
-                opacity: 1;
-            }
-            
-            #link_checkbox {
+            .preview-file {
+                width: 90%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
                 display: none;
+
             }
-            
-            #link {
-                border: 1px solid;
-                color: #00C853;
-                background: none;
-                width: calc(100% - 20px);
-                border-radius: 0;
-                outline: none;
-                padding: 10px;
-                font-size: 1rem;
-                margin: 10px 0;
-                display: none;
-            }
-            
-            #link_checkbox:checked ~ #link {
-                display: block;
-            }
-            
-            label[for="link_checkbox"] {
-                padding: .5rem 2rem;
+            .btn-green {
                 background: #00C853;
-                color: #FFF;
-                outline: none;
-                cursor: pointer;
             }
-            
-            .download .download_link {
-                text-decoration: none;
-                color: #FFF;
-                background: #00C853;
-                padding: .5rem 2rem;
-                border-radius: 3px;
-                opacity: .8;
-                transition: .3s;
+            .bottom {
+                width: 100%;
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
-            
-            .download .download_link:hover {
-                opacity: 1;
-            }
-            #upload{
-                background-color:black;
-            }
+        
         </style>
         <main class="main" id="main">
           <div class="file__upload">
-            <div class="header">
-              <p><i class="fa fa-cloud-upload fa-2x"></i><span><span>up</span>load</span></p>			
-            </div>
-            <form action="add_business_comp" method="POST" enctype="multipart/form-data" class="body h-75 pb-3 mb-2">
-              <!-- Sharable Link Code -->
-              
-              <input type="file" name="file" id="upload" accept="image/jpg, image/jpeg, image/png" required>
-              <label for="upload">
-                <i class="fa fa-file-text-o fa-3x"></i>
-                <p>
-                <br>
-                  <!-- <strong>Drag and drop</strong> files here<br> -->
-                  <span>browse</span> to begin the upload. Please only (JPG, JPEG, PNG format allowed) note that 
-                  Photo must not be more that 200KB
-                </p>
-              </label>
-              <button type="submit" name="submit" class="btn button">Upload</button>
-              <br />
-              <a href="skip_logo_upload" class="btn btn-warning">Skip</a>
-              <br />
-              <a href="add_business_cont" class="btn btn-danger mb-1"><< Back</a>
-            </form>
+                <div class="header">
+                    <span>Photo Upload</span>
+                    <a href="skip_logo_upload" class="btn btn-outline-warning">Skip</a>			
+                </div>
+                <div class="bg-white container">
+                    <ul class="row p-0 w-100">
+                            <li class='col-4 list-unstyled d-flex align-items-center justify-content-center text-white' style='height:3rem;background-color:#00C853;font-size:12px'>Business 
+                            details</li>
+                            <li class=' col-4 list-unstyled d-flex align-items-center justify-content-center text-white' style='height:3rem;background-color:#00C853; font-size:12px'>Business category</li>
+                            <li class=' col-4  list-unstyled d-flex align-items-center justify-content-center text-white' style='height:3rem;background-color:#00C853;font-size:12px'>Business file</li>
+                        </ul>
+                    <br>
+                    <!-- <strong>Drag and drop</strong> files here<br> -->
+                    Please only (JPG, JPEG, PNG format allowed) note that 
+                    Photo must not be more than 1MB <br>
+                    Click on the button below to select file to upload
+
+                    <form action="add_business_comp" method="POST" enctype="multipart/form-data" class="body h-75 pb-2 mb-1">
+                        <div class="preview">
+                            <img class='preview-file' id="file-preview">
+                        </div>
+                        <!-- Sharable Link Code -->
+                
+                        <input type="file" name="file" id="upload" accept="image/jpg, image/jpeg, image/png" onchange="showPreview(event)" required>
+                        <label for='upload' class='mb-4'>Upload Image</label>
+                        
+                        <?php 
+                            if(!$message == ''){
+                                echo '<br>';
+                                echo "<script type='text/javascript'>alert('$message');</script>";
+                            }
+                            $message = '';
+                        ?>
+                        
+                        <div class="bottom">
+                            <a href="add_business_cont" class="btn btn-danger mb-1 btn-lg"><< Back</a>
+                            <button type="submit" name="submit" class="btn btn-success btn-green btn-lg">Done</button>
+                        </div>
+                        
+                    </form> 
+                </div>
           </div>
         </main>
+        <script>
+            function showPreview(event){
+                if(event.target.files.length > 0){
+                   
+                    var src = URL.createObjectURL(event.target.files[0]);
+                    console.log(src)
+                    var preview = document.getElementById("file-preview");
+                    preview.src = src;
+                    preview.style.height = "300px"
+                    preview.style.display = "block";
+                }
+                }
+        </script>
 
 <?php include_portal_template("footer.php"); ?>
